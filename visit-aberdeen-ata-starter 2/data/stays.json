@@ -1,0 +1,106 @@
+[
+  {
+    "name": "Aberdeen Self Catering",
+    "image": "https://www.aberdeenselfcatering.co.za/wp-content/uploads/2025/04/klein-karoo-2.png",
+    "url": "https://www.aberdeenselfcatering.co.za/",
+    "kind": "Aberdeen town · Self catering & glamping",
+    "address": "14 Andries Pretorius Street, Eastern Cape",
+    "description": "Cottages and a luxury glamping option in a Karoo garden setting."
+  },
+  {
+    "name": "Pagel House B&B",
+    "image": null,
+    "url": "https://www.pagelhouse.co.za/",
+    "kind": "Aberdeen town · Bed & breakfast",
+    "address": "17 Stockenstrom Street, Eastern Cape",
+    "description": "Restored Victorian ostrich-era villa offering guest rooms, breakfast and peaceful gardens."
+  },
+  {
+    "name": "De Denne (Aberdeen)",
+    "image": "https://www.zawebsdata.co.za/image/medium/img_0160.jpg",
+    "url": "https://www.lekkeslaap.co.za/accommodation/de-denne",
+    "kind": "Aberdeen town · Self catering",
+    "address": "11 Brand Street, Eastern Cape",
+    "description": "Distinct Aberdeen self-catering accommodation. Not the De Denne Country Guest House in Oudtshoorn."
+  },
+  {
+    "name": "Die Dorpshuis",
+    "image": "https://www.zawebsdata.co.za/image/medium/er.jpg",
+    "url": "https://www.lekkeslaap.co.za/accommodation/die-dorpshuis-13",
+    "kind": "Aberdeen town · Self catering",
+    "address": "8 Murray Street, Eastern Cape",
+    "description": "Historic-town self-catering house suitable for up to four guests."
+  },
+  {
+    "name": "Die Wynberg Werf",
+    "image": "https://www.zawebsdata.co.za/image/medium/wynberg_werf_self_sorg_4.jpg",
+    "url": "https://www.lekkeslaap.co.za/accommodation/die-wynberg-werf",
+    "kind": "Aberdeen town · Self catering",
+    "address": "10 Noord Street, Eastern Cape",
+    "description": "Family-friendly flatlet in a quiet garden setting."
+  },
+  {
+    "name": "The Old Fort",
+    "image": null,
+    "url": "https://www.lekkeslaap.co.za/accommodation/the-old-fort-13",
+    "kind": "Aberdeen town · Self catering",
+    "address": "8 Andries Pretorius Street, Eastern Cape",
+    "description": "Comfortable self-catering accommodation close to the heart of town."
+  },
+  {
+    "name": "Die Tuis Huis",
+    "image": null,
+    "url": "https://www.lekkeslaap.co.za/accommodation/die-tuis-huis-19",
+    "kind": "Aberdeen town · Self catering",
+    "address": "16 Porter Street, Eastern Cape",
+    "description": "Spacious holiday house suitable for families and small groups."
+  },
+  {
+    "name": "Melkweg",
+    "image": null,
+    "url": "https://www.lekkeslaap.co.za/accommodation/melkweg",
+    "kind": "Aberdeen town · Self catering",
+    "address": "43 Cathcart Street, Eastern Cape",
+    "description": "Two-bedroom self-catering house with fireplace and secure parking."
+  },
+  {
+    "name": "Manakwa Self Catering",
+    "image": "https://www.zawebsdata.co.za/image/medium/img20230125wa0034.jpg",
+    "url": "https://www.aberdeenkaroo.co.za/listing/manakwa-self-catering-27-2023-40",
+    "kind": "Aberdeen town · Self catering",
+    "address": "21 Jackson Street (Stockenstrom Street entrance), Eastern Cape",
+    "description": "Spacious self-catering house with pool and solar power."
+  },
+  {
+    "name": "N9 Karoo Retreat — Town Cottage",
+    "image": null,
+    "url": "https://n9karooretreat.odoo.com/",
+    "kind": "Aberdeen town · Self catering",
+    "address": "13 Church Street, Eastern Cape",
+    "description": "One of three accommodation options offered by N9 Karoo Retreat."
+  },
+  {
+    "name": "N9 Karoo Retreat — Farm Cottage",
+    "image": null,
+    "url": "https://n9karooretreat.odoo.com/",
+    "kind": "Aberdeen district · Farm stay",
+    "address": "Kaapse Poortjie farm, N9, Eastern Cape",
+    "description": "Self-catering farm cottage in a quiet rural setting."
+  },
+  {
+    "name": "N9 Karoo Retreat — Caravan Stop",
+    "image": null,
+    "url": "https://n9karooretreat.odoo.com/n9-caravan-stop",
+    "kind": "Aberdeen district · Caravan / camping",
+    "address": "Kaapse Poortjie farm, approximately 18 km from Aberdeen, Eastern Cape",
+    "description": "Six caravan, motorhome and camping stands near the N9. Bookings essential."
+  },
+  {
+    "name": "Karoo Secret",
+    "image": "https://www.zawebsdata.co.za/image/medium/120_5589.jpg",
+    "url": "https://www.aberdeenkaroo.co.za/listing/karoosecret42kmfromaberdeen",
+    "kind": "Aberdeen district · Farm self catering",
+    "address": "Approximately 42 km from Aberdeen, Eastern Cape",
+    "description": "Working-farm cottage and countryside retreat, particularly suited to Karoo outdoor activities."
+  }
+]

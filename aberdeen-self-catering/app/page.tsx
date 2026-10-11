@@ -66,9 +66,10 @@ export default function Home() {
           </span>
         </a>
         <nav className="desktopNav" aria-label="Main navigation">
-          <a href="#stay">Stay</a>
+          <a href="/accommodation">Stay</a>
           <a href="#bikers">Bikers</a>
-          <a href="#activities">Activities</a>
+          <a href="/activities">Activities</a>
+          <a href="/activities/moonwalk">Moonwalk</a>
           <a href="#coffee">Check Mate</a>
           <a href="#explore">Explore</a>
           <a href="#contact">Contact</a>
@@ -91,7 +92,7 @@ export default function Home() {
             <a className="btn primary" href={nightsBridge} target="_blank" rel="noreferrer">
               Book accommodation
             </a>
-            <a className="btn ghost" href="#stay">
+            <a className="btn ghost" href="/accommodation">
               View accommodation
             </a>
           </div>
@@ -233,6 +234,12 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="section" id="moonwalk">
+        <p className="eyebrow dark">Monthly full moon outings</p>
+        <h2>Moonwalk, Run &amp; Cycle</h2>
+        <p>Explore the Karoo by moonlight. Ask about upcoming social walking, running and cycling events, including routes, start times and participation arrangements.</p>
+        <div className="heroActions"><a className="btn darkBtn" href="/activities/moonwalk">Explore the Moonwalk</a><a className="btn darkBtn" href={activityWhatsApp("the Moonwalk / Full Moon event")} target="_blank" rel="noreferrer">Enquire on WhatsApp</a></div>
+      </section>
       <section className="coffee section" id="coffee">
         <div className="coffeeCard">
           <p className="eyebrow">Eat · Meet · Relax</p>
@@ -308,7 +315,7 @@ export default function Home() {
           <p>Comfortable Karoo stays in historic Aberdeen, Eastern Cape.</p>
         </div>
         <div className="footerLinks">
-          <a href="#stay">Stay</a>
+          <a href="/accommodation">Stay</a>
           <a href="#bikers">Bikers</a>
           <a href="#coffee">Check Mate</a>
           <a href="#explore">Explore</a>

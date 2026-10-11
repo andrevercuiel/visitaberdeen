@@ -236,9 +236,9 @@ export default function Home() {
 
       <section className="section" id="moonwalk">
         <p className="eyebrow dark">Monthly full moon outings</p>
-        <h2>Moonwalk, Run &amp; Cycle</h2>
-        <p>Explore the Karoo by moonlight. Ask about upcoming social walking, running and cycling events, including routes, start times and participation arrangements.</p>
-        <div className="heroActions"><a className="btn darkBtn" href="/activities/moonwalk">Explore the Moonwalk</a><a className="btn darkBtn" href={activityWhatsApp("the Moonwalk / Full Moon event")} target="_blank" rel="noreferrer">Enquire on WhatsApp</a></div>
+        <h2>Monthly 21 km Full Moon Walk</h2>
+        <p>Every month around Full Moon, join a 21 km hike from Aberdeen to Wynberg Guest Farm. Enquiries: Jurgens Strydom, 082 389 5770.</p>
+        <div className="heroActions"><a className="btn darkBtn" href="/activities/moonwalk">Explore the Moonwalk</a><a className="btn darkBtn" href={"https://wa.me/27823895770?text=" + encodeURIComponent("Hello Jurgens, please send me details of the next 21 km Full Moon walk.")} target="_blank" rel="noreferrer">Enquire on WhatsApp</a></div>
       </section>
       <section className="coffee section" id="coffee">
         <div className="coffeeCard">

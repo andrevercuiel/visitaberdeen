@@ -40,8 +40,19 @@ const reviews = [
 const nightsBridge = "https://www.nightsbridge.co.za/bridge/book?bbid=19959";
 const phone = "27827990788";
 const whatsapp = `https://wa.me/${phone}?text=${encodeURIComponent(
-  "Hello Aberdeen Self Catering, I would like to enquire about accommodation."
+  "Hello Aberdeen Self Catering, I would like to enquire about activities and experiences."
 )}`;
+const activityWhatsApp = (activity: string) =>
+  `https://wa.me/${phone}?text=${encodeURIComponent(`Hello Aberdeen Self Catering, I would like to enquire about ${activity}. Please send me details and availability.`)}`;
+
+const activities = [
+  { name: "Karoo hiking & walking", description: "Explore trails, historic streets and scenic walks in and around Aberdeen. Ask about local routes and arrangements." },
+  { name: "Cycling & motorcycle routes", description: "Discover Karoo gravel roads, scenic loops and routes for two-wheeled adventures." },
+  { name: "Birdwatching & photography", description: "Enjoy the region's landscapes, birdlife and rewarding photographic outings." },
+  { name: "Stargazing & sundowner rides", description: "Experience Karoo skies and enquire about suitable evening outings, weather permitting." },
+  { name: "4×4 & farm experiences", description: "Ask about nearby off-road routes, farm outings and bush-camping possibilities." },
+  { name: "Heritage & day trips", description: "Explore Aberdeen's architecture, Graaff-Reinet, Camdeboo National Park and Nieu-Bethesda." },
+];
 
 export default function Home() {
   return (
@@ -57,6 +68,7 @@ export default function Home() {
         <nav className="desktopNav" aria-label="Main navigation">
           <a href="#stay">Stay</a>
           <a href="#bikers">Bikers</a>
+          <a href="#activities">Activities</a>
           <a href="#coffee">Check Mate</a>
           <a href="#explore">Explore</a>
           <a href="#contact">Contact</a>
@@ -197,6 +209,27 @@ export default function Home() {
           <a className="btn darkBtn" href={nightsBridge} target="_blank" rel="noreferrer">
             Book accommodation
           </a>
+        </div>
+      </section>
+
+      <section className="activities section" id="activities">
+        <div className="sectionHead">
+          <div>
+            <p className="eyebrow dark">Activities &amp; experiences</p>
+            <h2>More to discover in the Karoo</h2>
+            <p>From nature and heritage to outdoor adventures, ask us about local options and arrangements. Activities are handled by WhatsApp, not NightsBridge.</p>
+          </div>
+        </div>
+        <div className="exploreGrid">
+          {activities.map((activity) => (
+            <article key={activity.name}>
+              <strong>{activity.name}</strong>
+              <span>{activity.description}</span>
+              <a href={activityWhatsApp(activity.name)} target="_blank" rel="noreferrer" className="textLink">
+                Enquire on WhatsApp →
+              </a>
+            </article>
+          ))}
         </div>
       </section>
 

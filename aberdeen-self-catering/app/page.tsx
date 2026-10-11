@@ -37,6 +37,7 @@ const reviews = [
   },
 ];
 
+const nightsBridge = "https://www.nightsbridge.co.za/bridge/book?bbid=19959";
 const phone = "27827990788";
 const whatsapp = `https://wa.me/${phone}?text=${encodeURIComponent(
   "Hello Aberdeen Self Catering, I would like to enquire about accommodation."
@@ -60,7 +61,7 @@ export default function Home() {
           <a href="#explore">Explore</a>
           <a href="#contact">Contact</a>
         </nav>
-        <a className="headerCta" href={whatsapp} target="_blank" rel="noreferrer">
+        <a className="headerCta" href={nightsBridge} target="_blank" rel="noreferrer">
           Check availability
         </a>
       </header>
@@ -75,8 +76,8 @@ export default function Home() {
             garden setting in historic Aberdeen.
           </p>
           <div className="heroActions">
-            <a className="btn primary" href={whatsapp} target="_blank" rel="noreferrer">
-              Book on WhatsApp
+            <a className="btn primary" href={nightsBridge} target="_blank" rel="noreferrer">
+              Book accommodation
             </a>
             <a className="btn ghost" href="#stay">
               View accommodation
@@ -111,7 +112,7 @@ export default function Home() {
             <p className="eyebrow dark">Stay</p>
             <h2>Choose your Karoo stay</h2>
           </div>
-          <a href={whatsapp} target="_blank" rel="noreferrer" className="textLink">
+          <a href={nightsBridge} target="_blank" rel="noreferrer" className="textLink">
             Ask us what is available →
           </a>
         </div>
@@ -136,8 +137,8 @@ export default function Home() {
               <li>Sleeps 4</li>
               <li>Private braai</li>
             </ul>
-            <a className="btn darkBtn" href={whatsapp} target="_blank" rel="noreferrer">
-              Enquire about this cottage
+            <a className="btn darkBtn" href={nightsBridge} target="_blank" rel="noreferrer">
+              Book this cottage
             </a>
           </div>
         </div>
@@ -151,7 +152,7 @@ export default function Home() {
               <div className="cardBody">
                 <h3>{stay.name}</h3>
                 <p>{stay.detail}</p>
-                <a href={whatsapp} target="_blank" rel="noreferrer">
+                <a href={nightsBridge} target="_blank" rel="noreferrer">
                   Check availability →
                 </a>
               </div>
@@ -193,8 +194,8 @@ export default function Home() {
             <span>Bike wash</span>
             <span>Free firewood</span>
           </div>
-          <a className="btn darkBtn" href={whatsapp} target="_blank" rel="noreferrer">
-            Plan a biker stay
+          <a className="btn darkBtn" href={nightsBridge} target="_blank" rel="noreferrer">
+            Book accommodation
           </a>
         </div>
       </section>
@@ -210,7 +211,7 @@ export default function Home() {
           </p>
           <div className="coffeeActions">
             <a className="btn lightBtn" href={whatsapp} target="_blank" rel="noreferrer">
-              Ask about meals
+              Enquire on WhatsApp
             </a>
             <span>Good coffee · Karoo hospitality</span>
           </div>
@@ -257,12 +258,11 @@ export default function Home() {
           <div>
             <p className="eyebrow">Ready when you are</p>
             <h2>Make Aberdeen your next Karoo stop.</h2>
-            <p>Tell us your dates, number of guests and what kind of stay you prefer.</p>
+            <p>Reserve your accommodation online through NightsBridge, or WhatsApp us about activities, local experiences and other enquiries.</p>
           </div>
           <div className="contactActions">
-            <a className="btn lightBtn" href={whatsapp} target="_blank" rel="noreferrer">
-              WhatsApp +27 82 799 0788
-            </a>
+            <a className="btn lightBtn" href={nightsBridge} target="_blank" rel="noreferrer">Book accommodation · NightsBridge</a>
+            <a href={whatsapp} target="_blank" rel="noreferrer">Activities &amp; experiences · WhatsApp +27 82 799 0788</a>
             <a href="mailto:info@aberdeenselfcatering.co.za">info@aberdeenselfcatering.co.za</a>
             <span>14 Andries Pretorius Street, Aberdeen, Eastern Cape 6270</span>
           </div>

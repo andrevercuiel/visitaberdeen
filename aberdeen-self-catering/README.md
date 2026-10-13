@@ -12,7 +12,7 @@ This directory is the *separate* Aberdeen Self Catering application in the exist
 - No separate Our Story menu; introduction and community story integrated on the homepage.
 
 ## Important migration blockers before domain cutover
-1. The content currently references source images hosted at `www.aberdeenselfcatering.co.za/wp-content/uploads` and one Odoo Moonwalk poster. **This is deliberate for the development preview only.** Transfer the images into this project's `public/images` directory (or an independent configured media storage/CMS) and replace their URLs before cancelling the old hosting. Verify files and alt text.
+1. All 107 original accommodation, venue, café and Moon Walk images have been copied into `public/media` as independently hosted optimised WebP assets (approximately 20 MB in total). The site no longer depends on the old WordPress media URLs. Review image attribution and alt text before launch.
 2. The café hours, current menu prices, 15% biker discount, accommodation capacities, pool access, shared bathroom arrangements and current event dates need confirmation by the operator.
 3. The old WordPress blog content has been recovered and adapted into the five legacy URLs; review before going live. Verify original private farm routes and guide availability.
 4. Site previews default to **noindex,nofollow** and robots disallow. After the domain DNS, HTTPS, canonical and 301 redirects are correctly working on the intended domain, set the `SITE_LAUNCHED=true` environment variable in production. Set `NEXT_PUBLIC_SITE_URL=https://www.aberdeenselfcatering.co.za` to the correct canonical domain.

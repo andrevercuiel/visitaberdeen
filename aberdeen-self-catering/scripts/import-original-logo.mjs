@@ -1,0 +1,16 @@
+import {mkdir,writeFile,readFile} from "node:fs/promises";
+import path from "node:path";
+const original = "https://www.aberdeenselfcatering.co.za/wp-content/uploads/2017/01/Logo.png";
+const target = "public/media/brand/aberdeen-self-catering-logo.png";
+const headerFile = "components/Header.tsx";
+const logoLocal = "/media/brand/aberdeen-self-catering-logo.png";
+const response = await fetch(original,{headers:{"User-Agent":"Mozilla/5.0 (compatible; AberdeenSelfCatering/1.0)","Accept":"image/png,*/*;q=0.5"}});
+if(!response.ok)throw Error("Failed to download original logo (HTTP "+response.status+")");
+const data=Buffer.from(await response.arrayBuffer());
+if(data.length<500 || data.length>5000000 || data.subarray(0,8).toString("hex")!=="89504e470d0a1a0a")throw Error("Invalid PNG logo payload");
+await mkdir(path.dirname(target),{recursive:true});
+await writeFile(target,data);
+const source=await readFile(headerFile,"utf8");
+if(!source.includes(original))throw Error("Could not locate the original logo URL in Header.tsx");
+await writeFile(headerFile,source.replace(original,logoLocal),"utf8");
+console.log("Original Aberdeen Self Catering logo copied to "+target+" ("+data.length+" bytes). Header now uses own static asset.");

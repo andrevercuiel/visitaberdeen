@@ -1,0 +1,32 @@
+name: ASC one-time photo migration
+on:
+  push:
+    branches:
+      - asc-full-multipage-rebuild-20261013
+    paths:
+      - ".github/workflows/asc-media-import.yml"
+      - "aberdeen-self-catering/scripts/import-media.mjs"
+permissions:
+  contents: write
+jobs:
+  migrate:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: asc-full-multipage-rebuild-20261013
+          persist-credentials: true
+      - name: Download and replace legacy WordPress image references
+        working-directory: aberdeen-self-catering
+        run: node scripts/import-media.mjs
+      - name: Commit imported media to development branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add aberdeen-self-catering/public/media aberdeen-self-catering/lib/content.ts aberdeen-self-catering/app/page.tsx
+          if ! git diff --staged --quiet; then
+            git commit -m "Import original ASC photographs as independent static media"
+            git push origin HEAD:asc-full-multipage-rebuild-20261013
+          fi

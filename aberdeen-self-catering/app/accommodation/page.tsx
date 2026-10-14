@@ -4,8 +4,8 @@ import {stays, BOOKING_URL, PHONE} from "@/lib/content";
 import {pageMetadata} from "@/lib/seo";
 
 export const metadata = pageMetadata({
-  title: "Accommodation in Aberdeen, Eastern Cape | Cottages & Glamping",
-  description: "Browse self-catering cottages, Karoo glamping and biker-friendly accommodation in Aberdeen, Eastern Cape. See photos, facilities and check availability.",
+  title: "Accommodation in Aberdeen, Eastern Cape | Cottages & Biker Stays",
+  description: "Browse self-catering cottages and biker-only accommodation in Aberdeen, Eastern Cape. See photos, facilities and check availability.",
   path: "/accommodation"
 });
 
@@ -16,7 +16,7 @@ export default function Accommodation() {
       <div className="accom-heading-copy">
         <p className="accom-overline">Aberdeen · Eastern Cape · Karoo</p>
         <h1>Accommodation in Aberdeen</h1>
-        <p>Explore our self-catering cottages, glamping and biker-friendly stays in the Karoo.</p>
+        <p>Explore our self-catering cottages and biker-friendly stays in the Karoo.</p>
       </div>
       <div className="accom-heading-action">
         <a href={BOOKING_URL} className="accom-button accom-button-primary" target="_blank" rel="noopener noreferrer">Check availability <span aria-hidden="true">↗</span></a>

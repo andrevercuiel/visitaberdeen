@@ -26,7 +26,10 @@ export default function Home(){
       <Link className="simple-home-button simple-home-button-secondary" href="/contact-us">Contact us</Link>
      </div>
     </div>
+    <div className="simple-home-photo-frame">
     <Image className="simple-home-main-photo" src="/media/2023/03/20230308_154512-scaled.webp" alt="Aberdeen Self Catering garden and Karoo accommodation" width={1520} height={960} priority sizes="(max-width: 700px) 100vw, 50vw"/>
+     <Image className="simple-home-distance-sign" src="/media/aberdeen-distance-signpost.webp" alt="Karoo signpost showing distances from Aberdeen: 55 km from Graaff-Reinet, 112 km from Willowmore, 280 km from George and 150 km from Beaufort West" width={202} height={360} priority sizes="(max-width: 700px) 118px, 168px"/>
+    </div>
    </div>
   </section>
   <GuestRatings/>

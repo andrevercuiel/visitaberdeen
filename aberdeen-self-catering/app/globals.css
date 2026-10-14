@@ -233,3 +233,10 @@
 .outdoor-slide-dot[aria-current="true"]{width:24px;border-radius:8px;background:#2d634a}
 @media(max-width:700px){.outdoor-section{padding:22px 0 28px}.outdoor-slideshow{height:clamp(230px,65vw,360px);border-radius:9px}.outdoor-slide-caption{left:15px;bottom:16px}.outdoor-slide-count{right:13px;bottom:17px}.outdoor-slide-arrows{inset-inline:9px}.outdoor-slide-arrows button{width:40px;height:40px}.outdoor-slide-controls{gap:9px}}
 @media(prefers-reduced-motion:reduce){.outdoor-slideshow *{scroll-behavior:auto!important;transition:none!important}}
+
+
+/* Distinctive Aberdeen distance sign, unobtrusively placed on the top-right hero photo. */
+.simple-home-photo-frame{position:relative;isolation:isolate;min-width:0}
+.simple-home-distance-sign{position:absolute;z-index:2;right:-10px;top:50%;transform:translateY(-50%);width:auto;height:300px;max-width:none;object-fit:contain;filter:drop-shadow(0 4px 6px rgba(8,22,13,.34))}
+@media(max-width:900px){.simple-home-distance-sign{height:260px}}
+@media(max-width:700px){.simple-home-distance-sign{height:210px;right:-3px}}

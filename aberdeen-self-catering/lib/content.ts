@@ -1,6 +1,6 @@
 export const BOOKING_URL = "https://book.nightsbridge.com/19959";
 export const WHATSAPP_URL = "https://wa.me/27827990788";
-export const FULL_MOON_WHATSAPP = "https://wa.me/27823895770?text=Hello%20Jurgens%2C%20please%20send%20me%20details%20of%20the%20next%2021km%20Full%20Moon%20Walk.";
+export const FULL_MOON_WHATSAPP = "https://wa.me/27823895770?text=Hello%20Jurgens%2C%20please%20send%20me%20details%20of%20the%20monthly%20Full%20Moon%20event.";
 export const ADDRESS = "14 Andries Pretorius Street, Aberdeen, Eastern Cape 6270";
 export const EMAIL = "info@aberdeenselfcatering.co.za";
 export const PHONE = "+27 82 799 0788";

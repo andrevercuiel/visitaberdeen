@@ -5,17 +5,17 @@ import JsonLd from "@/components/JsonLd";
 import {moonWalkEventSchema} from "@/lib/seo";
 import Link from "next/link";
 import {attractions,MOON_WALK_POSTER,FULL_MOON_WHATSAPP,BOOKING_URL} from "@/lib/content";
-export const metadata=pageMetadata({title:"Things to Do in Aberdeen | Full Moon Walk & Karoo Activities",description:"Discover things to do in Aberdeen, Eastern Cape: the 21 km Full Moon Walk, Karoo hiking, biking, birdwatching, scenic farms and day trips.",path:"/activities"});
+export const metadata=pageMetadata({title:"Things to Do in Aberdeen | Full Moon Walk & Karoo Activities",description:"Discover things to do in Aberdeen, Eastern Cape: the monthly 11 km and 21 km Full Moon Hike, Run & Cycle, Karoo hiking, biking, birdwatching, scenic farms and day trips.",path:"/activities"});
 export const revalidate=3600;
 export default function Activities(){
  const octoberWalkCurrent=Date.now()<Date.parse("2026-10-25T04:30:00+02:00");
  return <main>{octoberWalkCurrent&&<JsonLd data={moonWalkEventSchema()}/>}<Breadcrumbs items={[{label:"Home",href:"/"},{label:"Activities",href:"/activities"}]}/>
  <section className="sub-hero"><div className="container"><p className="kicker">Stay. Explore. Experience.</p><h1>Things to do in Aberdeen</h1><p>Hiking, cycling, riding, stargazing and memorable Karoo getaways. Explore local experiences or join the monthly Full Moon Walk.</p><a className="btn btn-sand" href="#moonwalk">Full Moon Walk details ↓</a></div></section>
- <section className="section" id="moonwalk"><div className="container two-col"><div><p className="kicker">Featured monthly event</p><h2>21 km Full Moon Walk</h2><p className="lede">An organised night walk from Aberdeen Self Catering to Wynberg Guest Farm beneath the Karoo sky.</p>{octoberWalkCurrent?<>
- <div className="stat-row"><div><strong>24 Oct 2026</strong><br/>Meeting date</div><div><strong>23:30</strong><br/>Meet for midnight start</div><div><strong>21 km</strong><br/>Distance</div></div>
- <p style={{marginTop:22}}>Meet on 24 October at 23:30 for a midnight departure on 25 October. Expected arrival at Wynberg Guest Farm is approximately 04:30. The advertised entry fee is R45 per person, cash payable to the Wynberg host at the finish.</p>
- <p>Support and luggage vehicle and halfway coffee are included. Breakfast, boerewors rolls, snacks and drinks can be purchased at the finish. Return transport is each participant's responsibility. Farm accommodation enquiries: 082 723 0925.</p>
- <p><strong>Pre-book before 24 October. Organiser: Jurgens Strydom, 082 389 5770.</strong></p>
+ <section className="section" id="moonwalk"><div className="container two-col"><div><p className="kicker">Featured monthly event</p><h2>Monthly Full Moon Hike, Run & Cycle</h2><p className="lede">An overnight Karoo event from Aberdeen Self Catering to Wynberg Guest Farm, with 11 km and 21 km route options.</p>{octoberWalkCurrent?<>
+ <div className="stat-row"><div><strong>24 Oct 2026</strong><br/>Event date</div><div><strong>23:00</strong><br/>Assembly opens</div><div><strong>11 km / 21 km</strong><br/>Route options</div></div>
+ <p style={{marginTop:22}}>Assemble at Aberdeen Self Catering from 23:00 on Saturday, 24 October. Hikers depart at 23:59; runners depart at 02:00 and cyclists at 03:00 on Sunday, 25 October. The halfway stop is De Kruis Farm Stay (about 02:00), with arrival at Wynberg Guest Farm around 04:30. Entry is R45 per person, cash.</p>
+ <p>A support vehicle is available for extra luggage. There is no medical support on the route; sign the register and indemnity before departure. Coffee is provided at the start and hikers can get coffee at the halfway stop. Breakfast and refreshments are for sale at the finish. Return transport is available for R50 per person at 10:00, or arrange your own transport. Farm accommodation: 082 723 0025.</p>
+ <p><strong>Book by WhatsApping your name to Jurgens Strydom: 082 389 5770.</strong></p>
  </>:<>
  <p>For upcoming monthly walks, contact Jurgens Strydom on 082 389 5770 for dates and arrangements.</p>
  </>}<div className="actions"><a href={FULL_MOON_WHATSAPP} target="_blank" rel="noopener noreferrer" className="btn">WhatsApp Jurgens</a><a href="tel:+27823895770" className="btn btn-outline">Call the organiser</a></div></div><img src={MOON_WALK_POSTER} alt="Official Full Moon Walk poster" loading="lazy" style={{height:600,objectFit:"contain",background:"#f6f4ec"}} /></div></section>

@@ -18,6 +18,7 @@ export default function Accommodation() {
         <p className="accom-overline">Aberdeen · Eastern Cape · Karoo</p>
         <h1>Accommodation in Aberdeen</h1>
         <p>Explore our self-catering cottages and biker-friendly stays in the Karoo.</p>
+        <p>All rooms are air-conditioned and have solar-powered backup lighting.</p>
       </div>
       <div className="accom-heading-action">
         <a href={BOOKING_URL} className="accom-button accom-button-primary" target="_blank" rel="noopener noreferrer">Check availability <span aria-hidden="true">↗</span></a>

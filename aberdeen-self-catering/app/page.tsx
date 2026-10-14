@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import GuestRatings from "@/components/GuestRatings";
+import OutdoorSlideshow from "@/components/OutdoorSlideshow";
 import {pageMetadata} from "@/lib/seo";
 import {BOOKING_URL,stays,cafePhotos,activityPhotos} from "@/lib/content";
 
@@ -29,6 +30,7 @@ export default function Home(){
    </div>
   </section>
   <GuestRatings/>
+  <OutdoorSlideshow/>
   <section className="simple-home-choices simple-home-wrap" aria-label="Explore Aberdeen Self Catering">
    <article className="simple-home-choice">
     <Link href="/accommodation" className="simple-home-choice-photo" aria-label="Explore accommodation"><Image src={stays[0].images[0]} alt="Self-catering cottage at Aberdeen Self Catering" loading="lazy" width={1200} height={780} sizes="(max-width: 700px) 100vw, 33vw"/></Link>

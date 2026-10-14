@@ -7,7 +7,7 @@ This directory is the *separate* Aberdeen Self Catering application in the exist
 - Complete accommodation galleries drawn from the original site (82 gallery images).
 - Activities and October 2026 Full Moon Walk, historic 101km Challenge archive, event venue and café.
 - Complete article pages at the five original blog URLs.
-- Responsive navigation and footer with direct NightsBridge booking.
+- Responsive navigation and footer with secure external online booking.
 - Canonical, per-page SEO metadata, robots policy, sitemap and 301 legacy redirects.
 - No separate Our Story menu; introduction and community story integrated on the homepage.
 
@@ -30,7 +30,7 @@ npm run dev
 ## Test checklist
 - Routes: /, /accommodation, seven property slugs, /activities, /event-venue, /checkmate-coffee-cafe, /blog, five article slugs, /contact-us and /101km-camdeboo-challenge.
 - Old /contact and /our-story paths redirect; /things-to-do redirects to /activities.
-- Test main menu and mobile toggle; booking links open NightsBridge; WhatsApp links and email actions.
+- Test main menu and mobile toggle; booking links open the secure booking provider; WhatsApp links and email actions.
 - Inspect all images for missing assets or wrong property attribution.
 - Check headings, structured content, metadata, sitemap, robots.
 - Keep the current live WordPress domain unchanged until the new site is approved.

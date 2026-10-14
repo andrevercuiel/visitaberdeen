@@ -23,7 +23,7 @@ Last implementation: 14 October 2026. Repository `andrevercuiel/visitaberdeen`, 
 6. Remove or noindex duplicate old Odoo and WordPress website pages once www points to the replacement. DNS/hosting shutoff is separate from SEO.
 7. Have the accommodation owner confirm room occupancies, bathroom descriptions, café operating hours, any special discounts and the monthly Moon Walk schedule.
 8. Test structured-data output using https://search.google.com/test/rich-results and https://validator.schema.org/ and inspect pages with Search Console after DNS migration.
-9. Review pages on mobile including image lazy loading, modal gallery behaviour, WhatsApp and NightsBridge links. Lighthouse/PageSpeed can identify remaining Web Vitals changes.
+9. Review pages on mobile including image lazy loading, modal gallery behaviour, WhatsApp and online booking links. Lighthouse/PageSpeed can identify remaining Web Vitals changes.
 
 ## SEO targeting (natural, not repeated artificially)
 | Page | Intent |

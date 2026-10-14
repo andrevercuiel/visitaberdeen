@@ -15,8 +15,8 @@ export default function Accommodation() {
     <section className="accom-heading accom-shell">
       <div className="accom-heading-copy">
         <p className="accom-overline">Aberdeen · Eastern Cape · Karoo</p>
-        <h1>Our Accommodation</h1>
-        <p>Explore our self-catering cottages, glamping and biker-friendly stays in Aberdeen.</p>
+        <h1>Accommodation in Aberdeen</h1>
+        <p>Explore our self-catering cottages, glamping and biker-friendly stays in the Karoo.</p>
       </div>
       <div className="accom-heading-action">
         <a href={BOOKING_URL} className="accom-button accom-button-primary" target="_blank" rel="noopener noreferrer">Check availability <span aria-hidden="true">↗</span></a>

@@ -180,3 +180,36 @@
 }
 @media(max-width:410px){.simple-home-choice{display:flex;min-height:0}.simple-home-choice-photo{height:180px}.simple-home-choice-body{padding:17px}}
 
+
+
+/* Compact attributed review scores from independently hosted platforms. No schema aggregateRating. */
+.guest-ratings{width:min(1130px,92%);margin:0 auto 24px;border:1px solid #e0e8e1;background:#fbfcfa;border-radius:9px;padding:14px 17px 10px}
+.guest-ratings-row{display:grid;grid-template-columns:minmax(100px,.73fr) repeat(3,minmax(0,1fr));align-items:center;gap:8px}
+.guest-ratings-heading{color:#31463a;font-weight:750;font-size:.91rem}
+.guest-rating{display:flex;align-items:center;gap:10px;padding:7px 11px;border-left:1px solid #e0e8e1;border-radius:4px;white-space:nowrap;transition:background .18s ease}
+.guest-rating:hover{background:#f0f5ef}
+.guest-rating:focus-visible{outline:2px solid #367452;outline-offset:2px}
+.guest-rating-source{font-size:.81rem;font-weight:750;color:#31493b}
+.guest-rating-score{font-family:Arial,Helvetica,sans-serif;font-size:1.13rem;font-weight:780;color:#204b36;letter-spacing:-.03em}
+.guest-rating-score span{font-size:.67rem;color:#728177;font-weight:600}
+.guest-rating-count{font-size:.77rem;color:#64786a}
+.guest-ratings-note{margin:7px 0 0;text-align:right;font-size:.69rem;line-height:1.4;color:#7c887f}
+.accom-page>.guest-ratings{width:min(1120px,92%);margin:12px auto 0}
+@media(max-width:950px){
+.guest-ratings-row{grid-template-columns:repeat(3,minmax(0,1fr))}
+.guest-ratings-heading{grid-column:1/-1}
+.guest-rating:first-of-type{border-left:0;padding-left:0}
+.guest-rating{flex-wrap:wrap;gap:4px 8px}
+}
+@media(max-width:620px){
+.guest-ratings{padding:11px 13px 9px;margin-bottom:16px}
+.guest-ratings-row{gap:4px}
+.guest-rating{display:flex;flex-direction:column;align-items:flex-start;border-left:1px solid #e6eae5;padding:7px 6px;gap:2px}
+.guest-rating:first-of-type{border-left:0}
+.guest-rating-source{font-size:.73rem}
+.guest-rating-score{font-size:1.08rem}
+.guest-rating-count{font-size:.68rem}
+.guest-ratings-note{text-align:left;margin-top:6px;font-size:.65rem}
+}
+@media(max-width:390px){.guest-rating{padding:7px 4px}.guest-rating-source{font-size:.68rem}.guest-rating-count{font-size:.63rem}}
+

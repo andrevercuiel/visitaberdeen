@@ -1,4 +1,5 @@
 import Link from "next/link";
+import GuestRatings from "@/components/GuestRatings";
 import {pageMetadata} from "@/lib/seo";
 import {BOOKING_URL,stays,cafePhotos,activityPhotos} from "@/lib/content";
 
@@ -26,6 +27,7 @@ export default function Home(){
     <img className="simple-home-main-photo" src="/media/2023/03/20230308_154512-scaled.webp" alt="Aberdeen Self Catering garden and Karoo accommodation" width={760} height={480} decoding="async"/>
    </div>
   </section>
+  <GuestRatings/>
   <section className="simple-home-choices simple-home-wrap" aria-label="Explore Aberdeen Self Catering">
    <article className="simple-home-choice">
     <Link href="/accommodation" className="simple-home-choice-photo" aria-label="Explore accommodation"><img src={stays[0].images[0]} alt="Self-catering cottage at Aberdeen Self Catering" loading="lazy" width={600} height={390}/></Link>

@@ -1,4 +1,5 @@
 import Breadcrumbs from "@/components/Breadcrumbs";
+import GuestRatings from "@/components/GuestRatings";
 import AccommodationCard from "@/components/AccommodationCard";
 import {stays, BOOKING_URL, PHONE} from "@/lib/content";
 import {pageMetadata} from "@/lib/seo";
@@ -23,6 +24,7 @@ export default function Accommodation() {
         <span>View available dates and rates online</span>
       </div>
     </section>
+    <GuestRatings/>
     <section className="accom-shell accom-list-section" aria-labelledby="available-stays">
       <div className="accom-list-heading">
         <h2 id="available-stays">Choose your stay</h2>

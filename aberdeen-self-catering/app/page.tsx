@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import GuestRatings from "@/components/GuestRatings";
 import {pageMetadata} from "@/lib/seo";
 import {BOOKING_URL,stays,cafePhotos,activityPhotos} from "@/lib/content";
@@ -24,13 +25,13 @@ export default function Home(){
       <Link className="simple-home-button simple-home-button-secondary" href="/contact-us">Contact us</Link>
      </div>
     </div>
-    <img className="simple-home-main-photo" src="/media/2023/03/20230308_154512-scaled.webp" alt="Aberdeen Self Catering garden and Karoo accommodation" width={760} height={480} decoding="async"/>
+    <Image className="simple-home-main-photo" src="/media/2023/03/20230308_154512-scaled.webp" alt="Aberdeen Self Catering garden and Karoo accommodation" width={1520} height={960} priority sizes="(max-width: 700px) 100vw, 50vw"/>
    </div>
   </section>
   <GuestRatings/>
   <section className="simple-home-choices simple-home-wrap" aria-label="Explore Aberdeen Self Catering">
    <article className="simple-home-choice">
-    <Link href="/accommodation" className="simple-home-choice-photo" aria-label="Explore accommodation"><img src={stays[0].images[0]} alt="Self-catering cottage at Aberdeen Self Catering" loading="lazy" width={600} height={390}/></Link>
+    <Link href="/accommodation" className="simple-home-choice-photo" aria-label="Explore accommodation"><Image src={stays[0].images[0]} alt="Self-catering cottage at Aberdeen Self Catering" loading="lazy" width={1200} height={780} sizes="(max-width: 700px) 100vw, 33vw"/></Link>
     <div className="simple-home-choice-body">
      <h2><Link href="/accommodation">Accommodation</Link></h2>
      <p>Explore our cottages and accommodation for motorcycle travellers.</p>
@@ -38,7 +39,7 @@ export default function Home(){
     </div>
    </article>
    <article className="simple-home-choice">
-    <Link href="/checkmate-coffee-cafe" className="simple-home-choice-photo" aria-label="Explore Checkmate Café"><img src={cafePhotos[0]} alt="Checkmate Coffee Café at Aberdeen Self Catering" loading="lazy" width={600} height={390}/></Link>
+    <Link href="/checkmate-coffee-cafe" className="simple-home-choice-photo" aria-label="Explore Checkmate Café"><Image src={cafePhotos[0]} alt="Checkmate Coffee Café at Aberdeen Self Catering" loading="lazy" width={1200} height={780} sizes="(max-width: 700px) 100vw, 33vw"/></Link>
     <div className="simple-home-choice-body">
      <h2><Link href="/checkmate-coffee-cafe">Checkmate Café</Link></h2>
      <p>Enjoy coffee, breakfast and friendly Karoo hospitality in a relaxed setting.</p>
@@ -46,7 +47,7 @@ export default function Home(){
     </div>
    </article>
    <article className="simple-home-choice">
-    <Link href="/activities" className="simple-home-choice-photo" aria-label="Explore activities"><img src={activityPhotos[2]} alt="Hiking and outdoor activities in the Karoo near Aberdeen" loading="lazy" width={600} height={390}/></Link>
+    <Link href="/activities" className="simple-home-choice-photo" aria-label="Explore activities"><Image src={activityPhotos[2]} alt="Hiking and outdoor activities in the Karoo near Aberdeen" loading="lazy" width={1200} height={780} sizes="(max-width: 700px) 100vw, 33vw"/></Link>
     <div className="simple-home-choice-body">
      <h2><Link href="/activities">Activities</Link></h2>
      <p>Discover the Full Moon Walk, hiking, cycling and other Karoo experiences.</p>

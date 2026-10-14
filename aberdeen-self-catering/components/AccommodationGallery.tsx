@@ -1,6 +1,7 @@
 "use client";
 
 import {useEffect, useState} from "react";
+import Image from "next/image";
 
 export default function AccommodationGallery({images,name}:{images:string[];name:string}) {
   const [selected,setSelected] = useState<number|null>(null);
@@ -28,7 +29,7 @@ export default function AccommodationGallery({images,name}:{images:string[];name
           key={src+index}
           onClick={()=>setSelected(index)}
           aria-label={"View photo "+(index+1)+" of "+count+" of "+name}>
-          <img src={src} alt={name+" photograph "+(index+1)} loading={index===0?"eager":"lazy"} decoding="async"/>
+          <Image src={src} alt={name+" photograph "+(index+1)} priority={index===0} loading={index===0?undefined:"lazy"} decoding="async" width={1600} height={1100} sizes="(max-width: 700px) 100vw, 50vw"/>
         </button>)}
       </div>
       <button className="accom-photo-all" type="button" onClick={()=>setSelected(0)}>View all {count} photos</button>
@@ -39,7 +40,7 @@ export default function AccommodationGallery({images,name}:{images:string[];name
           <span>{name} · {selected+1} of {count}</span>
           <button type="button" onClick={()=>setSelected(null)} aria-label="Close photo gallery">Close ×</button>
         </div>
-        <div className="accom-lightbox-photo"><img src={images[selected]} alt={name+" photograph "+(selected+1)}/></div>
+        <div className="accom-lightbox-photo"><Image src={images[selected]} alt={name+" photograph "+(selected+1)} width={1800} height={1200} sizes="(max-width: 700px) 100vw, 90vw"/></div>
         <div className="accom-lightbox-controls">
           <button type="button" onClick={()=>setSelected((selected-1+count)%count)} aria-label="Previous photo">← Previous</button>
           <button type="button" onClick={()=>setSelected((selected+1)%count)} aria-label="Next photo">Next →</button>

@@ -110,3 +110,22 @@ export function cafeSchema(image:string){
   containedInPlace:{"@id":BUSINESS_ID}
  };
 }
+
+export function moonWalkEventSchema(){
+ return {
+  "@context":"https://schema.org",
+  "@type":"Event",
+  "@id":abs("/activities#full-moon-walk-2026-10"),
+  name:"Aberdeen 21 km Full Moon Walk to Wynberg Guest Farm",
+  description:"Organised 21 km nighttime walk from Aberdeen Self Catering to Wynberg Guest Farm. Meet at 23:30 on 24 October 2026 for a midnight departure.",
+  startDate:"2026-10-24T23:30:00+02:00",
+  endDate:"2026-10-25T04:30:00+02:00",
+  eventStatus:"https://schema.org/EventScheduled",
+  eventAttendanceMode:"https://schema.org/OfflineEventAttendanceMode",
+  location:{"@type":"Place",name:"Aberdeen Self Catering",
+   address:{"@type":"PostalAddress",streetAddress:"14 Andries Pretorius Street",addressLocality:"Aberdeen",addressRegion:"Eastern Cape",postalCode:"6270",addressCountry:"ZA"}},
+  image:abs("/media/aberdeen_full_moon_walk_poster.webp"),
+  organizer:{"@type":"Person",name:"Jurgens Strydom",telephone:"+27823895770"},
+  offers:{"@type":"Offer",url:abs("/activities"),price:"45",priceCurrency:"ZAR"}
+ };
+}

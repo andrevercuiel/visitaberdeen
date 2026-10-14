@@ -1,8 +1,46 @@
-import type {Metadata} from "next";
-import {pageMetadata} from "@/lib/seo";
 import Breadcrumbs from "@/components/Breadcrumbs";
-import RoomCard from "@/components/RoomCard";
-import {stays,BOOKING_URL} from "@/lib/content";
-export const metadata=pageMetadata({title:"Accommodation in Aberdeen, Eastern Cape | Cottages & Glamping",description:"Explore seven self-catering cottages, luxury glamping and biker-friendly stays in Aberdeen, Eastern Cape. Compare facilities, photos and book online.",path:"/accommodation"});
-export default function Accommodation(){return <main><Breadcrumbs items={[{label:"Home",href:"/"},{label:"Accommodation",href:"/accommodation"}]}/><section className="sub-hero"><div className="container"><p className="kicker">Stay in Aberdeen</p><h1>Find your perfect Karoo stay</h1><p>Explore our cottages, luxury glamping, group stays and biker-friendly accommodation. Every unit has its own photo gallery and facilities page.</p><a className="btn btn-sand" href={BOOKING_URL} target="_blank" rel="noopener noreferrer">Check availability ↗</a></div></section><section className="section"><div className="container"><div className="section-head"><div><p className="kicker">Accommodation collection</p><h2>Seven distinctive choices</h2><p>Explore each accommodation option for photographs, facilities, sleeping arrangements and booking information.</p></div></div><div className="room-grid">{stays.map(s=><RoomCard stay={s} key={s.slug}/>)}</div></div></section><section className="section section-soft"><div className="container"><h2>Accommodation facilities</h2><p className="lede">Facilities such as bathrooms, kitchens, braai areas and pool access vary by unit. Each accommodation page explains its particular arrangements, and the host can confirm any special requirements.</p><p>Check current rates and available dates online, or contact us for assistance.</p></div></section></main>}
+import AccommodationCard from "@/components/AccommodationCard";
+import {stays, BOOKING_URL, PHONE} from "@/lib/content";
+import {pageMetadata} from "@/lib/seo";
 
+export const metadata = pageMetadata({
+  title: "Accommodation in Aberdeen, Eastern Cape | Cottages & Glamping",
+  description: "Browse self-catering cottages, Karoo glamping and biker-friendly accommodation in Aberdeen, Eastern Cape. See photos, facilities and check availability.",
+  path: "/accommodation"
+});
+
+export default function Accommodation() {
+  return <main className="accom-page">
+    <Breadcrumbs items={[{label:"Home",href:"/"},{label:"Accommodation",href:"/accommodation"}]}/>
+    <section className="accom-heading accom-shell">
+      <div className="accom-heading-copy">
+        <p className="accom-overline">Aberdeen · Eastern Cape · Karoo</p>
+        <h1>Our Accommodation</h1>
+        <p>Explore our self-catering cottages, glamping and biker-friendly stays in Aberdeen.</p>
+      </div>
+      <div className="accom-heading-action">
+        <a href={BOOKING_URL} className="accom-button accom-button-primary" target="_blank" rel="noopener noreferrer">Check availability <span aria-hidden="true">↗</span></a>
+        <span>View available dates and rates online</span>
+      </div>
+    </section>
+    <section className="accom-shell accom-list-section" aria-labelledby="available-stays">
+      <div className="accom-list-heading">
+        <h2 id="available-stays">Choose your stay</h2>
+        <p>{stays.length} accommodation options</p>
+      </div>
+      <div className="accom-list">
+        {stays.map(stay => <AccommodationCard key={stay.slug} stay={stay}/>)}
+      </div>
+    </section>
+    <section className="accom-shell accom-enquiry-panel" aria-label="Booking assistance">
+      <div>
+        <h2>Need help choosing?</h2>
+        <p>Contact our team about your dates, group size or specific accommodation needs.</p>
+      </div>
+      <div className="accom-enquiry-actions">
+        <a className="accom-button accom-button-primary" href="https://wa.me/27827990788" target="_blank" rel="noopener noreferrer">WhatsApp us ↗</a>
+        <a className="accom-button accom-button-outline" href={"tel:"+PHONE.replace(/\s/g,"")}>Call us</a>
+      </div>
+    </section>
+  </main>;
+}

@@ -30,7 +30,6 @@ export default function Home(){
    </div>
   </section>
   <GuestRatings/>
-  <OutdoorSlideshow/>
   <section className="simple-home-choices simple-home-wrap" aria-label="Explore Aberdeen Self Catering">
    <article className="simple-home-choice">
     <Link href="/accommodation" className="simple-home-choice-photo" aria-label="Explore accommodation"><Image src={stays[0].images[0]} alt="Self-catering cottage at Aberdeen Self Catering" loading="lazy" width={1200} height={780} sizes="(max-width: 700px) 100vw, 33vw"/></Link>
@@ -57,5 +56,6 @@ export default function Home(){
     </div>
    </article>
   </section>
+  <OutdoorSlideshow/>
  </main>;
 }

@@ -7,7 +7,8 @@ const nextConfig = {
   return [
    {source:"/contact",destination:"/contact-us",permanent:true},
    {source:"/things-to-do",destination:"/activities",permanent:true},
-   {source:"/our-story",destination:"/#welcome",permanent:true}
+   {source:"/our-story",destination:"/#welcome",permanent:true},
+   {source:"/event-venue",destination:"/contact-us",permanent:true}
   ];
  },
  async headers(){

@@ -133,3 +133,50 @@
 }
 @media(max-width:390px){.accom-list-card{flex-direction:column}.accom-list-card-image{width:100%;height:185px}.accom-card-meta{margin-top:12px}}
 
+
+
+/* Compact, three-choice home page — independent from accommodation detail layouts */
+.simple-home{background:#fff;color:#20382e}
+.simple-home-wrap{width:min(1130px,92%);margin:0 auto}
+.simple-home-intro{padding:38px 0 31px}
+.simple-home-intro-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.91fr);align-items:center;gap:34px}
+.simple-home-overline{color:#557363;letter-spacing:.08em;text-transform:uppercase;font-weight:700;font-size:.77rem;margin:0 0 10px}
+.simple-home h1,.simple-home h2{font-family:Arial,Helvetica,sans-serif;letter-spacing:-.025em;line-height:1.22}
+.simple-home h1{font-size:clamp(2.05rem,3.1vw,2.95rem);margin:0 0 13px;font-weight:760}
+.simple-home-lead{font-size:1.07rem;line-height:1.6;color:#3f5848;font-weight:600;margin:0 0 9px}
+.simple-home-description{font-size:.95rem;line-height:1.7;color:#61746a;max-width:480px;margin:0}
+.simple-home-main-photo{width:100%;height:255px;object-fit:cover;display:block;border-radius:9px;background:#e9ece5}
+.simple-home-buttons{display:flex;flex-wrap:wrap;gap:10px;margin-top:23px}
+.simple-home-button{min-height:44px;display:inline-flex;align-items:center;justify-content:center;gap:6px;font-size:.91rem;font-weight:700;border-radius:5px;padding:11px 18px;line-height:1.2;text-align:center;border:1px solid #22543e}
+.simple-home-button-primary{color:#fff;background:#22543e}
+.simple-home-button-primary:hover{background:#193e2e;color:#fff}
+.simple-home-button-secondary{color:#22543e;background:#fff}
+.simple-home-button-secondary:hover{color:#22543e;background:#edf4ee}
+.simple-home-choices{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;padding:2px 0 47px}
+.simple-home-choice{border:1px solid #e0e8e1;border-radius:9px;overflow:hidden;background:#fff;display:flex;flex-direction:column;box-shadow:0 3px 14px rgba(25,46,34,.045)}
+.simple-home-choice-photo{display:block;height:195px;overflow:hidden;background:#eef0e9}
+.simple-home-choice-photo img{width:100%;height:100%;display:block;object-fit:cover;transition:transform .22s ease}
+.simple-home-choice-photo:hover img{transform:scale(1.025)}
+.simple-home-choice-body{padding:20px 21px 23px;display:flex;flex-direction:column;flex:1}
+.simple-home-choice h2{font-size:1.43rem;margin:0 0 10px}
+.simple-home-choice h2 a:hover{text-decoration:underline}
+.simple-home-choice-body>p{font-size:.91rem;line-height:1.65;color:#67776e;margin:0 0 18px}
+.simple-home-choice-link{margin-top:auto;color:#1d6345;font-weight:750;font-size:.89rem}
+.simple-home-choice-link:hover{text-decoration:underline;text-underline-offset:4px}
+@media(max-width:900px){.simple-home-intro-grid{gap:21px}.simple-home-main-photo{height:225px}.simple-home-choice-photo{height:165px}.simple-home-choice-body{padding:16px}}
+@media(max-width:700px){
+.simple-home-intro{padding:27px 0 25px}
+.simple-home-intro-grid{grid-template-columns:1fr;gap:23px}
+.simple-home-main-photo{height:208px}
+.simple-home h1{font-size:2.06rem}
+.simple-home-buttons{margin-top:19px}
+.simple-home-choices{grid-template-columns:1fr;gap:13px;padding-bottom:30px}
+.simple-home-choice{display:grid;grid-template-columns:38% 1fr;min-height:172px}
+.simple-home-choice-photo{height:100%}
+.simple-home-choice-body{padding:13px 15px}
+.simple-home-choice h2{font-size:1.17rem;margin:0 0 6px}
+.simple-home-choice-body>p{font-size:.83rem;line-height:1.5;margin-bottom:10px}
+.simple-home-choice-link{font-size:.82rem}
+}
+@media(max-width:410px){.simple-home-choice{display:flex;min-height:0}.simple-home-choice-photo{height:180px}.simple-home-choice-body{padding:17px}}
+

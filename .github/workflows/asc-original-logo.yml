@@ -1,0 +1,32 @@
+name: ASC import original website logo
+on:
+  push:
+    branches:
+      - asc-full-multipage-rebuild-20261013
+    paths:
+      - ".github/workflows/asc-original-logo.yml"
+      - "aberdeen-self-catering/scripts/import-original-logo.mjs"
+permissions:
+  contents: write
+jobs:
+  import-original-logo:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: asc-full-multipage-rebuild-20261013
+          persist-credentials: true
+      - name: Copy original Aberdeen Self Catering PNG logo into website
+        working-directory: aberdeen-self-catering
+        run: node scripts/import-original-logo.mjs
+      - name: Commit logo and independent header reference
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add aberdeen-self-catering/public/media/brand/aberdeen-self-catering-logo.png aberdeen-self-catering/components/Header.tsx
+          if ! git diff --staged --quiet; then
+            git commit -m "Host official Aberdeen Self Catering logo independently"
+            git push origin HEAD:asc-full-multipage-rebuild-20261013
+          fi

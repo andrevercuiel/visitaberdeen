@@ -7,7 +7,7 @@ export default function Header(){
  const [open,setOpen]=useState(false);
  return <header className="site-header">
    <div className="nav-wrap">
-     <Link href="/" className="logo" aria-label="Aberdeen Self Catering home"><span className="logo-mark">ASC</span><span><strong>Aberdeen Self Catering</strong><small>Historic Karoo · Eastern Cape</small></span></Link>
+     <Link href="/" className="logo" aria-label="Aberdeen Self Catering home"><img className="site-logo-image" src="https://www.aberdeenselfcatering.co.za/wp-content/uploads/2017/01/Logo.png" alt="Aberdeen Self Catering" width={150} height={82} /></Link>
      <nav className="nav-desktop" aria-label="Main menu">{links.map(([url,label])=><Link key={url} href={url}>{label}</Link>)}</nav>
      <a className="nav-book" href={BOOKING_URL} target="_blank" rel="noopener noreferrer">Check availability ↗</a>
      <button type="button" className="menu-toggle" aria-expanded={open} aria-controls="mobile-menu" onClick={()=>setOpen(!open)} aria-label={open?"Close menu":"Open menu"}>{open?"✕":"☰"}</button>

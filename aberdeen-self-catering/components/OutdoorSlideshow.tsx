@@ -9,6 +9,14 @@ const slides=[
  {src:"/media/outdoor/outdoor-garden.webp",alt:"Flowering garden and outdoor seating at Aberdeen Self Catering",label:"Garden"},
  {src:"/media/outdoor/outdoor-lapa-braai.webp",alt:"Covered lapa with braai and outdoor seating",label:"Lapa and braai"},
  {src:"/media/outdoor/outdoor-courtyard.webp",alt:"Thatched lapa, fish pond and secure courtyard entrance",label:"Courtyard"},
+ {src:"/media/outdoor/outdoor-fishpond-patio.webp",alt:"Fish pond beside the shaded patio and garden",label:"Fish pond and patio"},
+ {src:"/media/outdoor/outdoor-pond-garden.webp",alt:"Wide view of the garden patio beside the fish pond",label:"Pond and garden"},
+ {src:"/media/outdoor/outdoor-pool-lounge.webp",alt:"Outdoor lounge overlooking the pool area",label:"Poolside lounge"},
+ {src:"/media/outdoor/outdoor-garden-walk.webp",alt:"Shaded walkway through the garden",label:"Garden walkway"},
+ {src:"/media/outdoor/outdoor-poolside-seating.webp",alt:"Garden seating and fish pond beside the pool",label:"Garden seating"},
+ {src:"/media/outdoor/outdoor-pool-lapa.webp",alt:"Swimming pool viewed from the shaded lapa",label:"Pool and lapa"},
+ {src:"/media/outdoor/outdoor-fishpond-lapa.webp",alt:"Fish pond and seating area under the lapa",label:"Fish pond under the lapa"},
+ {src:"/media/outdoor/outdoor-lapa-dining.webp",alt:"Covered lapa dining and braai area",label:"Lapa dining area"},
 ] as const;
 
 export default function OutdoorSlideshow(){

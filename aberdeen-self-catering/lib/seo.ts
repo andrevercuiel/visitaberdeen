@@ -115,7 +115,7 @@ export function moonWalkEventSchema(){
  return {
   "@context":"https://schema.org",
   "@type":"Event",
-  "@id":abs("/activities#full-moon-walk-2026-10"),
+  "@id":abs("/activities/moonwalk#full-moon-walk-2026-10"),
   name:"Aberdeen Full Moon Hike, Run and Cycle to Wynberg Guest Farm",
   description:"Monthly overnight Karoo event with 11 km and 21 km options for hikers, runners and cyclists. Assembly opens at 23:00 on 24 October 2026; hikers depart at 23:59, runners at 02:00 and cyclists at 03:00.",
   startDate:"2026-10-24T23:59:00+02:00",
@@ -126,6 +126,6 @@ export function moonWalkEventSchema(){
    address:{"@type":"PostalAddress",streetAddress:"14 Andries Pretorius Street",addressLocality:"Aberdeen",addressRegion:"Eastern Cape",postalCode:"6270",addressCountry:"ZA"}},
   image:abs("/media/aberdeen_full_moon_walk_poster.webp"),
   organizer:{"@type":"Person",name:"Jurgens Strydom",telephone:"+27823895770"},
-  offers:{"@type":"Offer",url:abs("/activities"),price:"45",priceCurrency:"ZAR"}
+  offers:{"@type":"Offer",url:abs("/activities/moonwalk"),price:"45",priceCurrency:"ZAR"}
  };
 }

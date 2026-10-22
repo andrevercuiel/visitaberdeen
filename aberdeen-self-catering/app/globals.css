@@ -248,3 +248,17 @@
 .simple-home-distance-sign{position:absolute;z-index:2;right:-10px;top:50%;transform:translateY(-50%);width:auto;height:300px;max-width:none;object-fit:contain;filter:drop-shadow(0 4px 6px rgba(8,22,13,.34))}
 @media(max-width:900px){.simple-home-distance-sign{height:260px}}
 @media(max-width:700px){.simple-home-distance-sign{height:210px;right:-3px}}
+
+/* Consistent single-logo headers across activity sections. */
+.site-logo-image{width:104px;height:104px;max-height:none;object-fit:contain}
+.logo{padding:4px;border-radius:50%;background:#fff;overflow:hidden}
+.nav-wrap{padding-block:8px}
+.activity-choices .page-card h2{font-size:1.5rem}
+.activity-landscape{width:100%;height:auto;max-height:460px;object-fit:cover;border-radius:12px}
+@media(max-width:700px){.site-logo-image{width:88px;height:88px}.nav-wrap{padding-block:6px}.activity-landscape{height:auto;max-height:340px}}
+
+.activity-navigation{background:#f6f4ec;border-bottom:1px solid #d9ddce}
+.activity-navigation .container{display:flex;gap:8px 26px;flex-wrap:wrap;padding-block:14px}
+.activity-navigation a{font-size:.88rem;font-weight:700;color:#254537;padding:4px 0}
+.activity-navigation a:hover,.activity-navigation a:focus-visible{text-decoration:underline;text-underline-offset:5px}
+@media(max-width:700px){.activity-navigation .container{gap:6px 18px;padding-block:10px}.activity-navigation a{font-size:.8rem}}

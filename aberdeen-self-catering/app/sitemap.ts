@@ -2,7 +2,7 @@ import type {MetadataRoute} from "next";
 import {stays} from "@/lib/content";
 import {articles} from "@/lib/articles";
 import {abs} from "@/lib/seo";
-const pages=["/","/accommodation","/activities","/checkmate-coffee-cafe","/blog","/contact-us","/101km-camdeboo-challenge"];
+const pages=["/","/accommodation","/activities","/activities/walking","/activities/cycling","/activities/moonwalk","/checkmate-coffee-cafe","/blog","/contact-us","/101km-camdeboo-challenge"];
 export default function sitemap():MetadataRoute.Sitemap{
  if(process.env.SITE_LAUNCHED!=="true")return [];
  const fixed:MetadataRoute.Sitemap=pages.map(route=>({url:abs(route)}));

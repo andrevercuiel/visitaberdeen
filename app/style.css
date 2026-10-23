@@ -40,3 +40,37 @@ footer a:hover{color:#f0c98a}
 @media(max-width:1000px){.activityGrid{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media(max-width:800px){.activityGrid{grid-template-columns:repeat(2,minmax(0,1fr))}.footerInner{grid-template-columns:1fr 1fr}.visitStrip{align-items:flex-start;flex-direction:column}}
 @media(max-width:600px){.activityGrid{grid-template-columns:1fr}.heroCompact{min-height:360px;padding:58px 25px}.heroCompact p{font-size:16px}.siteHeader{align-items:flex-start}.siteHeader nav{gap:9px 16px}.siteHeader nav a{font-size:13px}.visitStrip{padding:24px}.footerInner{grid-template-columns:1fr}}
+
+
+/* Photo-led visitor homepage and consistent on-page Aberdeen photo libraries. */
+.homeHero{min-height:310px;padding-top:58px;padding-bottom:58px;background-position:center;background-size:cover}
+.homeHero h1{font-size:clamp(42px,6vw,74px);margin-bottom:14px}
+.homeHero p{margin-top:0;font-size:17px}
+.homeMain{padding-top:42px!important;padding-bottom:55px!important}
+.homeMain .sectionTitle{margin-bottom:24px}
+.mainMenuGrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.mainMenuCard{display:flex;flex-direction:column;min-width:0;background:#fff;border:1px solid #e7e2d7;border-radius:10px;overflow:hidden;transition:box-shadow .18s,transform .18s}
+.mainMenuCard:hover{transform:translateY(-3px);box-shadow:0 10px 26px rgba(26,54,41,.13)}
+.mainMenuCard:focus-visible,.photoLibraryItem a:focus-visible{outline:3px solid #a96735;outline-offset:3px}
+.mainMenuPhoto{aspect-ratio:16/9;overflow:hidden;background:#d7d4c8}
+.mainMenuPhoto img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .25s}
+.mainMenuCard:hover .mainMenuPhoto img{transform:scale(1.035)}
+.mainMenuContent{padding:19px 21px 22px;display:flex;flex-direction:column;flex:1}
+.mainMenuContent h3{font:normal 28px/1.2 Georgia,serif;margin:0 0 9px;color:#253d30}
+.mainMenuContent p{font-size:14px;line-height:1.55;color:#5b6c60;flex:1;margin:0 0 12px}
+.mainMenuContent span{font-size:13px;font-weight:700;color:#a96735}
+.photoLibrary{background:#edf0e9;border-top:1px solid #e1e7da}
+.photoLibraryInner{padding-top:48px!important;padding-bottom:58px!important}
+.photoLibrary h2{font:normal clamp(30px,4vw,44px)/1.2 Georgia,serif;margin:10px 0}
+.photoLibraryIntro{font-size:15px;line-height:1.6;color:#5f7064;margin:0 0 26px}
+.photoLibraryGrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.photoLibraryItem{min-width:0;background:#fff;border:1px solid #dce2d8;border-radius:8px;overflow:hidden;margin:0}
+.photoLibraryItem>a{display:block;background:#d9d9ce;aspect-ratio:4/3;overflow:hidden}
+.photoLibraryItem img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .2s}
+.photoLibraryItem>a:hover img{transform:scale(1.035)}
+.photoLibraryItem figcaption{padding:12px 14px 15px;display:flex;flex-direction:column;gap:7px}
+.photoLibraryItem figcaption strong{font:normal 18px Georgia,serif}
+.photoLibraryItem figcaption a{font-size:11px;line-height:1.4;color:#6b755f;text-decoration:underline;text-underline-offset:2px}
+.photoLibraryNote{margin-top:18px}
+@media(max-width:820px){.mainMenuGrid,.photoLibraryGrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){.homeHero{min-height:260px;padding:42px 23px}.homeHero p{font-size:15px}.mainMenuGrid,.photoLibraryGrid{grid-template-columns:1fr}.mainMenuContent{padding:17px 19px}.photoLibraryInner{padding-top:38px!important;padding-bottom:44px!important}}

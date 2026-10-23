@@ -1,48 +1,49 @@
-const highlights = [
-  ["01", "Historic town walks", "Architecture, landmarks and character-filled Karoo streets.", "/architecture"],
-  ["02", "Audio Discovery Route", "Eight stories to enjoy from your phone as you explore.", "/discovery-route"],
-  ["03", "Churches & heritage", "See distinctive churches and learn about Aberdeen’s past.", "/churches"],
-  ["04", "Artists & handmade goods", "Discover local art, ceramics, glasswork and crafts.", "/local-products"],
-  ["05", "Karoo food & coffee", "Make time for breakfast, a café stop or a relaxed lunch.", "/eat-drink"],
-  ["06", "Open gardens & events", "Find seasonal experiences and community celebrations.", "/events"],
-  ["07", "Nature & country escapes", "Find nearby scenery, farm experiences and fresh air.", "/explore-the-karoo"],
-  ["08", "Local stories", "Get to know the people and history behind the town.", "/stories"]
+import { photoById } from "./photos";
+
+const mainMenus = [
+  { title: "Things to Do", desc: "Heritage walks, local makers and Karoo adventures.", href: "/things-to-do", photo: "court" },
+  { title: "Eat & Drink", desc: "Discover town cafés, coffee stops and local flavours.", href: "/eat-drink", photo: "street" },
+  { title: "Stay", desc: "Guesthouses, cottages and welcoming Karoo stays.", href: "/stay", photo: "house" },
+  { title: "Events", desc: "Explore markets, garden days and local happenings.", href: "/events", photo: "wesleyan" },
+  { title: "Visitor Map", desc: "Find historic landmarks and plan your route.", href: "/map", photo: "church" },
+  { title: "Plan a Visit", desc: "Make the most of a quick stop or a longer stay.", href: "/plan-your-trip", photo: "steeple" }
 ];
 
 export default function Home() {
-  return <>
-    <section className="hero heroCompact">
-      <div className="heroInner">
-        <div className="eyebrow">WELCOME TO ABERDEEN · EASTERN CAPE</div>
-        <h1>Small town.<br/><em>So much to discover.</em></h1>
-        <p>Take a walk through history, meet local makers, enjoy Karoo hospitality and explore beyond the N9.</p>
-        <div className="actions">
-          <a className="btn" href="#activities">Explore activities →</a>
-          <a className="btn outline" href="/stay">Find accommodation</a>
+  return (
+    <>
+      <section className="hero heroCompact homeHero" style={{
+        backgroundImage: 'linear-gradient(110deg, rgba(23,53,40,.96), rgba(23,53,40,.67)), url("' + photoById.street.src + '")'
+      }}>
+        <div className="heroInner">
+          <div className="eyebrow">WELCOME TO ABERDEEN · EASTERN CAPE</div>
+          <h1>Discover <em>Aberdeen</em></h1>
+          <p>Historic charm, warm hospitality and the wide-open Karoo. Take your time and explore.</p>
         </div>
-      </div>
-    </section>
-    <main className="container homeMain">
-      <section id="activities" aria-labelledby="activities-title">
-        <div className="eyebrow">EXPLORE MORE OF ABERDEEN</div>
-        <h2 id="activities-title" className="sectionTitle">Things to do in and around town</h2>
-        <p className="lede">More than a quick stop: choose a heritage walk, experience the local food scene or plan a countryside outing.</p>
-        <div className="activityGrid">
-          {highlights.map(([num, name, description, link]) =>
-            <a className="activityTile" key={num} href={link}>
-              <span className="activityNumber">{num}</span>
-              <h3>{name}</h3>
-              <p>{description}</p>
-              <strong>Explore →</strong>
-            </a>
-          )}
-        </div>
-        <div className="actions"><a className="btn" href="/things-to-do">See all Aberdeen activities →</a><a className="btn secondary" href="/map">Open visitor map</a></div>
       </section>
-      <section className="visitStrip">
-        <div><div className="eyebrow">YOUR KAROO STOP, MADE MEMORABLE</div><h2>Just passing through?</h2><p>Plan an hour, an afternoon or a weekend in Aberdeen. Many of the best experiences begin with a simple walk around town.</p></div>
-        <div className="actions"><a className="btn" href="/plan-your-trip">Plan your visit →</a><a className="btn secondary" href="/events">Upcoming events</a></div>
-      </section>
-    </main>
-  </>;
+      <main className="container homeMain">
+        <section aria-labelledby="explore-aberdeen-title">
+          <div className="eyebrow">YOUR ABERDEEN GUIDE</div>
+          <h2 id="explore-aberdeen-title" className="sectionTitle">What would you like to explore?</h2>
+          <div className="mainMenuGrid">
+            {mainMenus.map(item => {
+              const photo = photoById[item.photo];
+              return (
+                <a className="mainMenuCard" href={item.href} key={item.href}>
+                  <div className="mainMenuPhoto">
+                    <img src={photo.src} alt={photo.alt} loading="lazy" decoding="async" />
+                  </div>
+                  <div className="mainMenuContent">
+                    <h3>{item.title}</h3>
+                    <p>{item.desc}</p>
+                    <span>Explore →</span>
+                  </div>
+                </a>
+              );
+            })}
+          </div>
+        </section>
+      </main>
+    </>
+  );
 }

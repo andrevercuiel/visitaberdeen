@@ -1,4 +1,5 @@
 import "./style.css";
+import PhotoGallery from "./PhotoGallery";
 
 export const metadata = {
   metadataBase: new URL("https://visitaberdeen.co.za"),
@@ -23,7 +24,7 @@ export default function RootLayout({ children }) {
       <a className="brand" href="/" aria-label="Visit Aberdeen home">VISIT <b>ABERDEEN</b><small>EASTERN CAPE · SOUTH AFRICA</small></a>
       <nav aria-label="Main navigation">{nav.map(([label, href]) => <a key={href} href={href}>{label}</a>)}</nav>
     </header>
-    <div id="main-content">{children}</div>
+    <div id="main-content">{children}<PhotoGallery /></div>
     <footer>
       <div className="footerInner">
         <div><strong>Visit Aberdeen</strong><p>Slow down and discover our Karoo town, its people and its places.</p><p>Aberdeen · Dr Beyers Naudé · Eastern Cape</p></div>

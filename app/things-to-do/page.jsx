@@ -1,6 +1,8 @@
 export const metadata = {
   title: "Things to Do in Aberdeen, Eastern Cape",
-  description: "Explore heritage walks, churches, local artists, Karoo food, gardens, nature, mohair and country experiences in Aberdeen, South Africa."
+  description: "Discover heritage walks, churches, local artists, Karoo experiences, gardens and outdoor activities in Aberdeen, Eastern Cape.",
+  alternates: { canonical: "/things-to-do" },
+  openGraph: { title: "Things to Do in Aberdeen, Eastern Cape", description: "Discover heritage walks, churches, local artists, Karoo experiences, gardens and outdoor activities in Aberdeen, Eastern Cape.", url: "https://visitaberdeen.co.za/things-to-do", type: "website", locale: "en_ZA", siteName: "Visit Aberdeen" }
 };
 
 const groups = [

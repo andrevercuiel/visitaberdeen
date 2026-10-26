@@ -14,6 +14,8 @@ export const photos = pictures.map(photo => {
   return {
     ...photo,
     src: "https://commons.wikimedia.org/wiki/Special:FilePath/" + encoded + "?width=1000",
+    card: "https://commons.wikimedia.org/wiki/Special:FilePath/" + encoded + "?width=720",
+    thumb: "https://commons.wikimedia.org/wiki/Special:FilePath/" + encoded + "?width=480",
     full: "https://commons.wikimedia.org/wiki/Special:FilePath/" + encoded,
     source: "https://commons.wikimedia.org/wiki/File:" + encoded,
   };

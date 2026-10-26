@@ -3,9 +3,19 @@ import PhotoGallery from "./PhotoGallery";
 
 export const metadata = {
   metadataBase: new URL("https://visitaberdeen.co.za"),
-  title: { default: "Visit Aberdeen | Discover the Karoo", template: "%s | Visit Aberdeen" },
-  description: "Discover activities in Aberdeen, Eastern Cape: heritage walks, local art, Karoo food, gardens, nature, places to stay and events.",
-  openGraph: { title: "Visit Aberdeen — Discover the Karoo", description: "Things to do, eat and see in Aberdeen, Eastern Cape.", url: "https://visitaberdeen.co.za", siteName: "Visit Aberdeen", locale: "en_ZA", type: "website" }
+  title: { default: "Visit Aberdeen, Eastern Cape | Karoo Travel Guide", template: "%s | Visit Aberdeen" },
+  description: "Plan your trip to Aberdeen, Eastern Cape, South Africa. Find things to do, places to stay, local food, events, historic sites and Karoo visitor information.",
+  applicationName: "Visit Aberdeen",
+  openGraph: { siteName: "Visit Aberdeen", locale: "en_ZA", type: "website" },
+  twitter: { card: "summary" }
+};
+
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    { "@type": "WebSite", "@id": "https://visitaberdeen.co.za/#website", name: "Visit Aberdeen", url: "https://visitaberdeen.co.za/", inLanguage: "en-ZA", description: "Tourism and visitor information for Aberdeen, Eastern Cape, South Africa." },
+    { "@type": "Organization", "@id": "https://visitaberdeen.co.za/#association", name: "Aberdeen Tourism Association", url: "https://visitaberdeen.co.za/" }
+  ]
 };
 
 const nav = [
@@ -19,6 +29,7 @@ const nav = [
 
 export default function RootLayout({ children }) {
   return <html lang="en"><body>
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }} />
     <a className="skipLink" href="#main-content">Skip to content</a>
     <header className="siteHeader">
       <a className="brand" href="/" aria-label="Visit Aberdeen home">VISIT <b>ABERDEEN</b><small>EASTERN CAPE · SOUTH AFRICA</small></a>

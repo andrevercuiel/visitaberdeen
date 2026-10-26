@@ -1,8 +1,10 @@
 import events from '../../data/events.json';
 
 export const metadata = {
-  title: 'Events in Aberdeen | Visit Aberdeen',
-  description: 'Discover confirmed events and community experiences in Aberdeen, Eastern Cape, including the idea for an Open Gardens & Karoo Flavours day.',
+  title: "Events in Aberdeen, Eastern Cape",
+  description: "Find confirmed festivals, markets, garden days, sporting activities and community events in Aberdeen, Eastern Cape. Check dates before visiting.",
+  alternates: { canonical: "/events" },
+  openGraph: { title: "Events in Aberdeen, Eastern Cape", description: "Find confirmed festivals, markets, garden days, sporting activities and community events in Aberdeen, Eastern Cape. Check dates before visiting.", url: "https://visitaberdeen.co.za/events", type: "website", locale: "en_ZA", siteName: "Visit Aberdeen" }
 };
 
 export default function Events() {

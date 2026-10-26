@@ -38,7 +38,7 @@ export default function PhotoGallery() {
           {selected.map(photo => (
             <figure className="photoLibraryItem" key={photo.id}>
               <a href={photo.full} target="_blank" rel="noopener noreferrer" aria-label={"View larger photograph: " + photo.title}>
-                <img src={photo.src} alt={photo.alt} loading="lazy" decoding="async" />
+                <img src={photo.thumb} alt={photo.alt} loading="lazy" decoding="async" />
               </a>
               <figcaption>
                 <strong>{photo.title}</strong>

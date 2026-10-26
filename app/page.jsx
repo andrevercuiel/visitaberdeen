@@ -1,5 +1,21 @@
 import { photoById } from "./photos";
 
+export const metadata = {
+  title: { absolute: "Visit Aberdeen, Eastern Cape | Karoo Travel Guide" },
+  description: "Explore Aberdeen, Eastern Cape: historic walks, Karoo food, accommodation, local events and visitor attractions. Plan your stop or stay in South Africa.",
+  alternates: { canonical: "/" },
+  openGraph: { title: "Visit Aberdeen, Eastern Cape | Karoo Travel Guide", description: "Explore Aberdeen, Eastern Cape: historic walks, Karoo food, accommodation, local events and visitor attractions. Plan your stop or stay in South Africa.", url: "https://visitaberdeen.co.za/", type: "website", locale: "en_ZA", siteName: "Visit Aberdeen" }
+};
+const destinationSchema = {
+  "@context": "https://schema.org",
+  "@type": "TouristDestination",
+  name: "Aberdeen, Eastern Cape",
+  description: "Historic Karoo town with architecture, local food, arts, accommodation and visitor activities.",
+  url: "https://visitaberdeen.co.za/",
+  address: { "@type": "PostalAddress", addressLocality: "Aberdeen", addressRegion: "Eastern Cape", addressCountry: "ZA" }
+};
+
+
 const mainMenus = [
   { title: "Things to Do", desc: "Heritage walks, local makers and Karoo adventures.", href: "/things-to-do", photo: "court" },
   { title: "Eat & Drink", desc: "Discover town cafés, coffee stops and local flavours.", href: "/eat-drink", photo: "street" },
@@ -12,6 +28,7 @@ const mainMenus = [
 export default function Home() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(destinationSchema) }} />
       <section className="hero heroCompact homeHero" style={{
         backgroundImage: 'linear-gradient(110deg, rgba(23,53,40,.96), rgba(23,53,40,.67)), url("' + photoById.street.src + '")'
       }}>
@@ -31,7 +48,7 @@ export default function Home() {
               return (
                 <a className="mainMenuCard" href={item.href} key={item.href}>
                   <div className="mainMenuPhoto">
-                    <img src={photo.src} alt={photo.alt} loading="lazy" decoding="async" />
+                    <img src={photo.card} alt={photo.alt} loading="lazy" decoding="async" />
                   </div>
                   <div className="mainMenuContent">
                     <h3>{item.title}</h3>

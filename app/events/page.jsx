@@ -27,6 +27,19 @@ export default function Events() {
         listed in the calendar.
       </p>
 
+
+      <section aria-labelledby="vlam-vesel-title" style={{ marginTop: 46 }}>
+        <div className="eyebrow">LOCAL CULTURAL FESTIVAL</div>
+        <h2 id="vlam-vesel-title" className="pageTitle">Vlam &amp; Vesel — Fire &amp; Fibre of the Karoo</h2>
+        <p className="lede">Celebrate the defining elements of Aberdeen's farming community: flame, braai, hospitality, wool, sheep and the people whose skills sustain the Karoo.</p>
+        <div className="featureGrid">
+          <article className="feature"><span>VLAM / FLAME</span><h3>Food &amp; fellowship</h3><p>Local braai, food and warm Karoo hospitality bring people together.</p></article>
+          <article className="feature"><span>VESEL / FIBRE</span><h3>Wool &amp; farming heritage</h3><p>Discover the sheep-farming and fibre traditions that helped shape Aberdeen's identity.</p></article>
+          <article className="feature"><span>COMMUNITY</span><h3>Local culture</h3><p>A place for makers, agricultural displays and celebrations of rural life when the programme is announced.</p></article>
+        </div>
+        <p className="fine">A previous community outline describes this as a recurring festival, often around September. No 2026 or future date is confirmed here; only approved dated events appear below.</p>
+        <p><a href="/visitor-routes#arts-crafts-culture"><b>Explore Aberdeen's Arts &amp; Culture route →</b></a></p>
+      </section>
       <section aria-labelledby="garden-day-title" style={{ marginTop: 46 }}>
         <div className="eyebrow">A FUTURE ATA EVENT IDEA</div>
         <h2 id="garden-day-title" className="pageTitle">

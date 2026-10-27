@@ -1,6 +1,23 @@
 export const metadata = {
   title: "Historic Churches in Aberdeen",
-  description: "Explore the Dutch Reformed Church and other historic churches in Aberdeen, Eastern Cape. Find heritage highlights and visitor guidance.",
+  description: "Discover Aberdeen's Dutch Reformed Church, Wesleyan Methodist and Anglican heritage, and its handmade biblical panels.",
   alternates: { canonical: "/churches" },
-  openGraph: { title: "Historic Churches in Aberdeen", description: "Explore the Dutch Reformed Church and other historic churches in Aberdeen, Eastern Cape. Find heritage highlights and visitor guidance.", url: "https://visitaberdeen.co.za/churches", type: "website", locale: "en_ZA", siteName: "Visit Aberdeen" }
-};export default function Churches(){return <main className="container pad"><div className="eyebrow">FAITH & HERITAGE</div><h1 className="pageTitle">Churches of Aberdeen</h1><p className="lede">Aberdeen's historic churches connect architecture, congregations, families and generations of local stories.</p><div className="featureGrid"><article className="feature"><h3>Dutch Reformed Church</h3><p>Aberdeen's congregation was established in 1855. The church developed in stages, with work completed in 1864 and later in 1908.</p></article><article className="feature"><h3>Wesleyan Methodist Church</h3><p>A nineteenth-century church, associated with records dating the building to 1882–1883.</p></article><article className="feature"><h3>Anglican Church</h3><p>Aberdeen's Anglican heritage includes a historic church recorded in architectural sources as dating to 1894.</p></article></div><p className="fine">Please respect worship services and private access. Historical dates require final editorial source verification.</p><p><a className="btn" href="/discovery-route">Explore heritage stops →</a></p></main>}
+  openGraph: { title: "Historic Churches in Aberdeen", description: "Church architecture, biblical textile art and Aberdeen's heritage.", url: "https://visitaberdeen.co.za/churches", type: "website", locale: "en_ZA", siteName: "Visit Aberdeen" }
+};
+
+const places = [
+  ["Dutch Reformed Church", "Aberdeen's congregation was established in 1855. The church is known for its striking tower and place in the town's founding story. Local heritage accounts also describe a slight tower tilt and an olive tree linked by tradition to the Garden of Gethsemane."],
+  ["Handmade biblical panels", "Church members created textile panels depicting biblical covenant stories. They are an example of faith expressed through local craftsmanship; ask about arranged viewing at the church hall."],
+  ["Wesleyan Methodist Church", "The historic stone church, associated with the 1882–1883 period, features Gothic-style windows and belfry details, and reflects the Methodist community's part in Aberdeen history."],
+  ["Anglican heritage", "Aberdeen's Anglican church represents another thread of nineteenth-century Christian life and British colonial influence. Community-supplied dates for St James and existing records for All Saints differ and should be checked before definitive publication."]
+];
+
+export default function Churches() {
+  return <main className="container pad"><div className="eyebrow">FAITH, STONE & STORIES</div>
+    <h1 className="pageTitle">Churches of Aberdeen</h1>
+    <p className="lede">Explore places of faith that helped shape Aberdeen's architecture, neighbourhoods and community life.</p>
+    <div className="featureGrid">{places.map(([title, detail]) => <article className="feature" key={title}><h3>{title}</h3><p>{detail}</p></article>)}</div>
+    <p className="fine">Please respect worship, private areas and opening arrangements. The olive-tree origin and some historic dates are local accounts requiring verification, not independently authenticated facts.</p>
+    <p><a className="btn" href="/visitor-routes#faith-stone-stories">Discover the Faith, Stone & Stories route →</a></p>
+  </main>;
+}

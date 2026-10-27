@@ -51,6 +51,21 @@ export default function ThingsToDo() {
     <div className="eyebrow">YOUR ABERDEEN EXPERIENCE</div>
     <h1 className="pageTitle">Things to do in Aberdeen</h1>
     <p className="lede">There is more here than meets the eye. Start with the town’s remarkable heritage and hospitality, then discover local makers, gardens and the Karoo countryside.</p>
+
+    <section aria-labelledby="visitor-routes-heading">
+      <div className="eyebrow">FOUR THEMED JOURNEYS</div>
+      <h2 id="visitor-routes-heading" className="sectionTitle">Explore Aberdeen by route</h2>
+      <div className="activityGrid">
+        {[
+          ["Faith, Stone & Stories", "Historic churches, biblical textile panels, architecture and the cemetery.", "faith-stone-stories"],
+          ["Authentic Karoo Flavours", "Coffee shops, farm-stall treats and small-town hospitality.", "authentic-karoo-flavours"],
+          ["Arts, Crafts & Culture", "Galleries, local creativity, wool heritage and Vlam & Vesel.", "arts-crafts-culture"],
+          ["Light, Land & Silence", "Farm experiences, photography, full-moon hiking and stargazing.", "light-land-silence"]
+        ].map(([title, detail, slug]) => <a className="activityTile" key={slug} href={"/visitor-routes#" + slug}>
+          <span className="activityTag">Themed route</span><h3>{title}</h3><p>{detail}</p><strong>Explore route →</strong>
+        </a>)}
+      </div>
+    </section>
     <div className="categoryLinks" aria-label="Jump to activity types">
       {groups.map(g => <a href={"#" + g.id} key={g.id}>{g.label} ↓</a>)}
     </div>

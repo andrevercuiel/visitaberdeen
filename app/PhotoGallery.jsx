@@ -6,6 +6,7 @@ import { photoById } from "./photos";
 const pagePhotos = {
   "/": ["street", "church", "house", "court", "wesleyan", "steeple", "church-detail"],
   "/things-to-do": ["street", "court", "wesleyan", "church", "house"],
+  "/visitor-routes": ["church", "court", "wesleyan", "street", "house"],
   "/eat-drink": ["street", "house", "church"],
   "/stay": ["house", "street", "steeple"],
   "/events": ["street", "church", "house"],

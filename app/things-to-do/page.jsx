@@ -1,92 +1,35 @@
+import {routes} from "../../data/visitorRoutes";
 export const metadata = {
-  title: "Things to Do in Aberdeen, Eastern Cape",
-  description: "Discover heritage walks, churches, local artists, Karoo experiences, gardens and outdoor activities in Aberdeen, Eastern Cape.",
-  alternates: { canonical: "/things-to-do" },
-  openGraph: { title: "Things to Do in Aberdeen, Eastern Cape", description: "Discover heritage walks, churches, local artists, Karoo experiences, gardens and outdoor activities in Aberdeen, Eastern Cape.", url: "https://visitaberdeen.co.za/things-to-do", type: "website", locale: "en_ZA", siteName: "Visit Aberdeen" }
+  title:"Things to Do in Aberdeen, Eastern Cape",
+  description:"Explore Aberdeen's heritage, food, arts and outdoor Karoo experiences through four simple visitor routes.",
+  alternates:{canonical:"/things-to-do"},
+  openGraph:{title:"Things to Do in Aberdeen, Eastern Cape",description:"Four easy ways to discover Aberdeen: heritage, food, arts and the Karoo outdoors.",url:"https://visitaberdeen.co.za/things-to-do",type:"website",locale:"en_ZA",siteName:"Visit Aberdeen"}
 };
-
-const groups = [
-  {
-    id: "heritage", label: "In the village", heading: "Heritage, stories & beautiful streets",
-    items: [
-      ["Historic architecture walk", "Explore Victorian, Edwardian and traditional Karoo buildings from public streets.", "/architecture", "Self-guided"],
-      ["Eight-stop audio Discovery Route", "Listen to historical stories at each stop on a walk or drive through town.", "/discovery-route", "Self-guided"],
-      ["Dutch Reformed Church", "Admire the prominent steeple and striking church architecture.", "/churches", "Check visiting access"],
-      ["Biblical textile artworks", "Ask about the collection of biblical panels in the Dutch Reformed Church hall.", "/churches", "Access by arrangement"],
-      ["Other historic churches", "Discover the town’s Anglican and Wesleyan Methodist heritage.", "/churches", "Respect services and access"],
-      ["Old magistrate’s court & post office", "Look closely at the decorative details of Aberdeen’s historic civic buildings.", "/discovery-route", "Exterior viewing"],
-      ["Historic homes & Pagel House", "Learn how farming, commerce and surprising characters shaped the town.", "/discovery-route", "Private properties — exterior only"],
-      ["Aberdeen’s historic cemeteries", "Reflect on family history and Anglo-Boer War stories in the old burial grounds.", "/discovery-route", "Respectful visits"],
-      ["Aberdeen Heritage Archive", "Explore the possibility of viewing historical records and old photographs.", "/stories", "Enquire before visiting"]
-    ]
-  },
-  {
-    id: "culture", label: "Local experiences", heading: "Arts, flavours & village life",
-    items: [
-      ["Artists’ studios", "Discover local artists working in glass, ceramics and other creative media.", "/local-products", "Visits by arrangement"],
-      ["Local crafts & Karoo products", "Browse handmade items, gifts and locally produced food.", "/local-products", "Check outlets and opening times"],
-      ["Breakfast, coffee or a Karoo lunch", "Stop at an Aberdeen café or eatery and enjoy the town at an easy pace.", "/eat-drink", "Check opening times"],
-      ["Open gardens & garden visits", "Watch for organised garden days and seasonal village garden experiences.", "/events", "Event dates to be confirmed"],
-      ["Markets, performances & town events", "Discover local gatherings, festivals and special tourism occasions.", "/events", "Check confirmed dates"],
-      ["Stories of Aberdeen", "Meet the history and personalities behind this unusual Karoo town.", "/stories", "Read and discover"]
-    ]
-  },
-  {
-    id: "nature", label: "Town & surrounds", heading: "Outdoors and the Karoo countryside",
-    items: [
-      ["Fonteinbos Nature Reserve", "Discover a local natural area associated with Aberdeen’s landscape.", "/explore-the-karoo", "Confirm access and conditions"],
-      ["Karoo birdwatching", "Bring binoculars and look for birds in town gardens and suitable surrounding habitats.", "/explore-the-karoo", "Respect private land"],
-      ["Cycling and scenic walking", "Enjoy quiet Karoo scenery where safe and permitted routes are available.", "/explore-the-karoo", "Confirm route suitability"],
-      ["Karoo farm-life experience", "Ask participating farm stays about their working-farm experiences.", "/stay", "Booking by arrangement"],
-      ["Wool & mohair country", "Explore the region’s farming heritage and the story of Karoo mohair.", "/explore-the-karoo", "Tour availability varies"],
-      ["Open skies & stargazing", "Enjoy the region’s expansive views and dark-sky atmosphere from a suitable venue.", "/stay", "Weather dependent"],
-      ["Scenic country drives", "Explore surrounding Karoo landscapes and rural roads with local route advice.", "/explore-the-karoo", "Check road conditions"],
-      ["Full Moon walk & outdoor events", "Look out for announced community walking, running and cycling occasions.", "/events", "Only when scheduled"]
-    ]
-  }
+const extras=[
+ ["Listen to the audio heritage tour","/discovery-route"],
+ ["Explore historic buildings","/architecture"],
+ ["Discover churches","/churches"],
+ ["Meet local makers","/local-products"],
+ ["Enjoy the Karoo outdoors","/explore-the-karoo"]
 ];
-
 export default function ThingsToDo() {
-  return <main className="container pad">
-    <div className="eyebrow">YOUR ABERDEEN EXPERIENCE</div>
-    <h1 className="pageTitle">Things to do in Aberdeen</h1>
-    <p className="lede">There is more here than meets the eye. Start with the town’s remarkable heritage and hospitality, then discover local makers, gardens and the Karoo countryside.</p>
-
-    <section aria-labelledby="visitor-routes-heading">
-      <div className="eyebrow">FOUR THEMED JOURNEYS</div>
-      <h2 id="visitor-routes-heading" className="sectionTitle">Explore Aberdeen by route</h2>
-      <div className="activityGrid">
-        {[
-          ["Faith, Stone & Stories", "Historic churches, biblical textile panels, architecture and the cemetery.", "faith-stone-stories"],
-          ["Authentic Karoo Flavours", "Coffee shops, farm-stall treats and small-town hospitality.", "authentic-karoo-flavours"],
-          ["Arts, Crafts & Culture", "Galleries, local creativity, wool heritage and Vlam & Vesel.", "arts-crafts-culture"],
-          ["Light, Land & Silence", "Farm experiences, photography, full-moon hiking and stargazing.", "light-land-silence"]
-        ].map(([title, detail, slug]) => <a className="activityTile" key={slug} href={"/visitor-routes#" + slug}>
-          <span className="activityTag">Themed route</span><h3>{title}</h3><p>{detail}</p><strong>Explore route →</strong>
-        </a>)}
-      </div>
-    </section>
-    <div className="categoryLinks" aria-label="Jump to activity types">
-      {groups.map(g => <a href={"#" + g.id} key={g.id}>{g.label} ↓</a>)}
+  return <main className="container pad quietContent">
+    <div className="eyebrow">DISCOVER ABERDEEN</div>
+    <h1 className="pageTitle">Things to do</h1>
+    <p className="lede">You don't have to do everything. Choose what interests you and enjoy Aberdeen at your own pace.</p>
+    <div className="routeSelection">
+      {routes.map((route,i)=><a className="routeChoice" href={"/visitor-routes#"+route.id} key={route.id}>
+        <span className="routeChoiceNumber">0{i+1}</span>
+        <div><span className="eyebrow">{route.label}</span><h2>{route.title}</h2><p>{route.description}</p></div>
+        <span className="routeChoiceArrow" aria-hidden="true">→</span>
+      </a>)}
     </div>
-    {groups.map(g => <section id={g.id} className="activitySection" key={g.id} aria-labelledby={g.id + "-heading"}>
-      <div className="eyebrow">{g.label}</div>
-      <h2 id={g.id + "-heading"}>{g.heading}</h2>
-      <div className="activityGrid">
-        {g.items.map(([name, detail, href, note]) =>
-          <a className="activityTile" key={name} href={href}>
-            <span className="activityTag">{note}</span>
-            <h3>{name}</h3>
-            <p>{detail}</p>
-            <strong>Find out more →</strong>
-          </a>
-        )}
+    <section className="moreExplore" aria-labelledby="specific-heading">
+      <h2 id="specific-heading">Looking for something specific?</h2>
+      <div className="textLinkCollection">
+        {extras.map(([label,href])=><a href={href} key={href}>{label} <span aria-hidden="true">→</span></a>)}
       </div>
-    </section>)}
-    <section className="visitStrip">
-      <div><div className="eyebrow">MAKE A DAY OF IT</div><h2>Plan your Aberdeen visit</h2><p>Combine a historic walk with coffee, a meal and a local discovery. Some experiences need prior booking, permission or an event date.</p></div>
-      <div className="actions"><a className="btn" href="/plan-your-trip">Plan a visit →</a><a className="btn secondary" href="/map">Visitor map</a></div>
     </section>
-    <p className="fine">This is a guide to local experiences, not a guarantee of public access, opening hours or paid tours. Confirm arrangements directly with operators before travelling. Private properties are not open to visitors unless invited.</p>
+    <p className="fine">Opening times, availability and guided experiences must be confirmed with the relevant venue or organiser.</p>
   </main>;
 }

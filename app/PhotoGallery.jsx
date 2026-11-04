@@ -20,7 +20,7 @@ export default function PhotoGallery(){
  const selected=keys.map(id=>photoById[id]).filter(Boolean);
  return <section className="photoLibrary calmGallery" aria-label="Aberdeen photographs">
    <div className="container galleryContainer">
-     <details className="galleryDisclosure">
+     <details key={path} className="galleryDisclosure" open={["/architecture", "/churches", "/eat-drink", "/things-to-do", "/explore-the-karoo"].includes(path)}>
        <summary><span>Photographs of Aberdeen</span><span aria-hidden="true">＋</span></summary>
        <p className="fine">A glimpse of Aberdeen and the surrounding Karoo. Select a photograph to see a larger view.</p>
        <div className="photoLibraryGrid">

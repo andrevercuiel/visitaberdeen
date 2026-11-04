@@ -58,7 +58,7 @@ export default function Route() {
     if (speakingId === stop.id) { stopNarration(); return; }
     stopNarration();
     const synth = window.speechSynthesis;
-    const utterance = new SpeechSynthesisUtterance(stop.transcript.replace(/\n+/g, ". "));
+    const utterance = new SpeechSynthesisUtterance(stop.transcript);
     const selected = chooseVoice(synth.getVoices());
     if (selected) { utterance.voice = selected; utterance.lang = selected.lang; }
     else utterance.lang = "en-ZA";
@@ -92,9 +92,9 @@ export default function Route() {
     <div className="stops">{stops.map(s => <article className="stop" key={s.id}>
       <div className="num">{String(s.id).padStart(2, "0")}</div>
       <div className="stopBody">
-        <div className="eyebrow">HERITAGE AUDIO STOP</div>
+        <div className="eyebrow">HERITAGE AUDIO STOP{s.seconds && ` · ${Math.floor(s.seconds / 60)}:${String(s.seconds % 60).padStart(2, "0")}`}</div>
         <h2>{s.name}</h2>
-        <audio ref={el => { audioRefs.current[s.id] = el; }} controls preload="none" src={`${s.audio}?voice=emma-1`} aria-label={`Tour narration for ${s.name}`} onPlay={() => {
+        <audio ref={el => { audioRefs.current[s.id] = el; }} controls preload="none" src={`${s.audio}?voice=heritage-2`} aria-label={`Tour narration for ${s.name}`} onPlay={() => {
             if (typeof window !== "undefined" && "speechSynthesis" in window) window.speechSynthesis.cancel();
             activeSpeech.current = null;
             setSpeakingId(null);
@@ -111,7 +111,7 @@ export default function Route() {
           <button className="plain" onClick={() => setOpen(p => ({...p, [s.id]: !p[s.id]}))}>{open[s.id] ? "Hide" : "Read"} story {open[s.id] ? "−" : "+"}</button>
           <button className={done.includes(s.id) ? "visited" : "mark"} onClick={() => toggle(s.id)}>{done.includes(s.id) ? "✓ Visited" : "Mark as visited"}</button>
         </div>
-        {open[s.id] && <p className="transcript">{s.transcript}</p>}
+        {open[s.id] && <div className="transcript">{s.transcript.split("\n\n").map((paragraph, i) => <p key={i}>{paragraph}</p>)}<p className="fine">Historical sources</p><ul>{s.sources.map(source => <li key={source.url}><a href={source.url}>{source.label}</a></li>)}</ul></div>}
       </div>
     </article>)}</div>
     {done.length === stops.length && <div className="completion">🎉 You completed the Aberdeen Discovery Route! Contact participating businesses about current offers. No automatic reward is promised.</div>}

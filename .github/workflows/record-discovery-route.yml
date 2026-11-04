@@ -1,6 +1,7 @@
 name: Record discovery route
 on:
   push:
+    branches: ['tour/**']
     paths:
       - '.github/workflows/record-discovery-route.yml'
   workflow_dispatch:
@@ -9,7 +10,7 @@ permissions:
 jobs:
   record:
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    timeout-minutes: 55
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -29,16 +30,32 @@ jobs:
           import json, subprocess, soundfile, pathlib
           from kokoro_onnx import Kokoro
           narrator = Kokoro('/tmp/model.onnx', '/tmp/voices.bin')
-          for stop in json.loads(pathlib.Path('data/stops.json').read_text()):
-              script = stop['transcript'].replace('\n\n', '. ')
-              samples, rate = narrator.create(script, voice='bf_emma', speed=0.97, lang='en-gb')
-              assert len(samples) / rate > 15
+          import numpy as np
+          path = pathlib.Path('data/stops.json')
+          stops = json.loads(path.read_text())
+          for stop in stops:
+              pieces = []
+              for paragraph in stop['transcript'].split('\n\n'):
+                  samples, rate = narrator.create(paragraph, voice='bf_emma', speed=0.94, lang='en-gb')
+                  if pieces:
+                      pieces.append(np.zeros(round(rate * 1.15), dtype=np.float32))
+                  pieces.append(samples)
+              samples = np.concatenate(pieces)
+              seconds = len(samples) / rate
+              tempo = min(1, seconds / 187) if seconds < 187 else max(1, seconds / 292)
+              assert 0.80 <= tempo <= 1.15, (stop['name'], seconds)
               soundfile.write('/tmp/stop.wav', samples, rate)
-              subprocess.run(['ffmpeg','-loglevel','error','-y','-i','/tmp/stop.wav','-codec:a','libmp3lame','-q:a','3','public' + stop['audio']],check=True)
+              filename = 'public' + stop['audio']
+              subprocess.run(['ffmpeg','-loglevel','error','-y','-i','/tmp/stop.wav','-af', f'atempo={tempo:.5f}','-codec:a','libmp3lame','-q:a','3',filename],check=True)
+              duration = float(subprocess.check_output(['ffprobe','-v','error','-show_entries','format=duration','-of','csv=p=0',filename]))
+              assert 180 <= duration <= 300, (filename, duration)
+              stop['seconds'] = round(duration)
+              print(stop['name'], duration, flush=True)
+          path.write_text(json.dumps(stops, ensure_ascii=False, indent=2) + '\n')
       - name: Save recordings
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add public/audio/*.mp3
+          git add data/stops.json public/audio/*.mp3
           git diff --cached --quiet || git commit -m 'Replace the eight Discovery Route recordings with studio narration'
           git push

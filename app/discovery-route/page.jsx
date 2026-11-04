@@ -94,21 +94,19 @@ export default function Route() {
       <div className="stopBody">
         <div className="eyebrow">HERITAGE AUDIO STOP</div>
         <h2>{s.name}</h2>
-        {speechAvailable && <div style={{marginBottom: "0.75rem"}}>
-          <button className="mark" type="button" onClick={() => narrate(s)} aria-label={speakingId === s.id ? `Stop narration at ${s.name}` : `Listen to ${s.name} with natural voice`}>
-            {speakingId === s.id ? "■ Stop narration" : "▶ Listen — natural voice"}
-          </button>
-          <p className="fine" style={{margin: "0.35rem 0"}}>Uses your device’s English narrator{voiceLabel ? ` (${voiceLabel})` : ""}. Voice quality varies by device.</p>
-        </div>}
-        <details style={{marginBottom: "0.75rem"}}>
-          <summary>{speechAvailable ? "Alternative: original audio recording" : "Listen to recording"}</summary>
-          <audio ref={el => { audioRefs.current[s.id] = el; }} controls preload="none" src={s.audio} aria-label={`Original audio recording of ${s.name}`} onPlay={() => {
+        <audio ref={el => { audioRefs.current[s.id] = el; }} controls preload="none" src={`${s.audio}?voice=emma-1`} aria-label={`Tour narration for ${s.name}`} onPlay={() => {
             if (typeof window !== "undefined" && "speechSynthesis" in window) window.speechSynthesis.cancel();
             activeSpeech.current = null;
             setSpeakingId(null);
             Object.entries(audioRefs.current).forEach(([id, el]) => { if (Number(id) !== s.id && el) el.pause(); });
           }}>Your browser does not support audio playback.</audio>
-        </details>
+        {speechAvailable && <details style={{marginBottom: "0.75rem"}}>
+          <summary>Use your device’s voice instead</summary>
+          <button className="mark" type="button" onClick={() => narrate(s)} aria-label={speakingId === s.id ? `Stop narration at ${s.name}` : `Listen to ${s.name} with device voice`}>
+            {speakingId === s.id ? "■ Stop narration" : "▶ Listen with device voice"}
+          </button>
+          <p className="fine" style={{margin: "0.35rem 0"}}>Uses your device’s English narrator{voiceLabel ? ` (${voiceLabel})` : ""}. Voice quality varies by device.</p>
+        </details>}
         <div className="stopActions">
           <button className="plain" onClick={() => setOpen(p => ({...p, [s.id]: !p[s.id]}))}>{open[s.id] ? "Hide" : "Read"} story {open[s.id] ? "−" : "+"}</button>
           <button className={done.includes(s.id) ? "visited" : "mark"} onClick={() => toggle(s.id)}>{done.includes(s.id) ? "✓ Visited" : "Mark as visited"}</button>
@@ -117,6 +115,6 @@ export default function Route() {
       </div>
     </article>)}</div>
     {done.length === stops.length && <div className="completion">🎉 You completed the Aberdeen Discovery Route! Contact participating businesses about current offers. No automatic reward is promised.</div>}
-    <p className="fine">Narration uses your device’s available English speech voices, with original recordings as a fallback. Historical transcripts, dates and pronunciation should be reviewed by local historians before official publication. GPS check-ins and Afrikaans narration are planned, not yet active.</p>
+    <p className="fine">All eight stops use the same recorded English AI narrator. You can also read each story below. Historical transcripts, dates and pronunciation should be reviewed by local historians before official publication. GPS check-ins and Afrikaans narration are planned, not yet active.</p>
   </main>;
 }

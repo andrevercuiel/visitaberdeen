@@ -41,7 +41,7 @@ export default function Home() {
         <span>Explore further</span>
         <a href="/visitor-routes">Four themed routes →</a>
         <a href="/discovery-route">Audio heritage tour →</a>
-        <a href="/map">Visitor map →</a>
+        <a href="/map#tourist-map">Tourist map &amp; PDF download →</a>
       </div>
     </main>
   </>;

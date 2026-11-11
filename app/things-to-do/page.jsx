@@ -6,6 +6,7 @@ export const metadata = {
   openGraph:{title:"Things to Do in Aberdeen, Eastern Cape",description:"Four easy ways to discover Aberdeen: heritage, food, arts and the Karoo outdoors.",url:"https://visitaberdeen.co.za/things-to-do",type:"website",locale:"en_ZA",siteName:"Visit Aberdeen"}
 };
 const extras=[
+ ["View or download the tourist map","/map#tourist-map"],
  ["Listen to the audio heritage tour","/discovery-route"],
  ["Explore historic buildings","/architecture"],
  ["Discover churches","/churches"],

@@ -10,16 +10,16 @@ const venues=[
  ["Windmill Coffee Shop","Coffee, breakfast and light meals","Deli-style food and coffee in a historic Aberdeen setting.","8 Voortrekker Street · verify address"],
  ["Die Stal Sports & Cocktail Bar","Drinks and socialising","An informal social spot for drinks, conversation and watching sport.","Aberdeen · address to be confirmed"],
  ["Karooh Kitchen","Pizza, Fish & Chips","Local takeaway pizza, fish and chips.","Aberdeen · trading details to be confirmed"],
- ["Kamdebo Padstal","Karoo farm-stall favourites","Karoo-style food, pancakes, baked goods, preserves and farm products.","N9 / R61 junction"]
+ ["Kamdebo Padstal","Coffee, pancakes, home-cooked meals and farm shop","Just outside the historic town of Aberdeen, where the N9 and R61 meet, Kamdebo Padstal awaits – a cheerful yellow landmark of genuine Karoo hospitality.\n\nEnjoy aromatic coffee, famous pancakes, delicious home-cooked meals and local treats. Browse the farm shop for unique gifts, handmade products and Karoo treasures.\n\nKamdebo Padstal is proudly owned and run by Hanna and Dirk van der Westhuizen, the mother-and-son winners of kykNET’s Kokkedoor: Son & See.\n\nThis is a welcoming stop where good food, warm hospitality and the distinctive character of the Great Karoo come together.","N9 / R61 junction","Net buite die geskiedkundige dorpie Aberdeen, waar die N9 en R61 ontmoet, wag Kamdebo Padstal – ’n vrolike geel baken van egte Karoo-gasvryheid.\n\nKom geniet geurige koffie, beroemde pannekoek, heerlike tuisgemaakte geregte en allerlei plaaslike lekkernye. Snuffel rustig deur die negosiewinkel, waar unieke geskenke, handgemaakte produkte en Karoo-skatte op jou wag.\n\nKamdebo Padstal word met trots besit en bedryf deur Hanna en Dirk van der Westhuizen, die ma-en-seun-wenners van kykNET se Kokkedoor: Son & See.\n\nHier is ’n stilhouplek waar goeie kos, warm gasvryheid en die besondere karakter van die Groot-Karoo bymekaarkom."]
 ];
 export default function Eat() {
  return <main className="container pad quietContent">
    <div className="eyebrow">LOCAL FLAVOURS</div><h1 className="pageTitle">Eat & Drink</h1>
    <p className="lede">Good coffee, a relaxed breakfast or a taste of the Karoo. Choose a stop and check arrangements before you visit.</p>
    <div className="simpleDirectory">
-     {venues.map(([name,tag,detail,address])=>{const member=members.find(m=>m.name===name&&m.categories.includes("Eat & Drink"));return member?<details className="directoryItem" key={name}>
+     {venues.map(([name,tag,detail,address,detailAf])=>{const member=members.find(m=>m.name===name&&m.categories.includes("Eat & Drink"));return member?<details className="directoryItem" key={name}>
        <summary><span><strong>{name}</strong><small>ATA member 2026 · {tag}</small></span><span className="directoryExpand" aria-hidden="true">＋</span></summary>
-       <div className="directoryBody"><p>{detail}</p><p className="fine">{address}</p>{member.links.map(([label,url])=><p key={url}><a href={url} target="_blank" rel="noopener noreferrer">{label} ↗</a></p>)}</div>
+       <div className="directoryBody"><div lang="en">{detail.split("\n\n").map((paragraph,i)=><p key={i}>{paragraph}</p>)}</div>{detailAf&&<details lang="af"><summary>Lees in Afrikaans</summary>{detailAf.split("\n\n").map((paragraph,i)=><p key={i}>{paragraph}</p>)}</details>}<p className="fine">{address}</p>{member.links.map(([label,url])=><p key={url}><a href={url} target="_blank" rel="noopener noreferrer">{label} ↗</a></p>)}</div>
      </details>:<article className="feature" key={name}><h3>{name}</h3></article>;})}
    </div>
    <div className="quietBottomLink"><a href="/visitor-routes#authentic-karoo-flavours">Explore the Karoo Flavours route →</a></div>

@@ -8,10 +8,8 @@ export const metadata = {
 const venues=[
  ["Check Mate Coffee Café","Coffee, breakfast and chess","Fresh coffee, espresso drinks, breakfast and light meals in a relaxed setting.","Aberdeen · address to be confirmed"],
  ["Windmill Coffee Shop","Coffee, breakfast and light meals","Deli-style food and coffee in a historic Aberdeen setting.","8 Voortrekker Street · verify address"],
- ["The Blue Door Aberdeen","Coffee and lunch","A welcoming local coffee, breakfast and lunch stop.","18 Voortrekker Street · verify address"],
  ["Die Stal Sports & Cocktail Bar","Drinks and socialising","An informal social spot for drinks, conversation and watching sport.","Aberdeen · address to be confirmed"],
- ["Kahroo Diner","Pizza, fish and chicken","Casual sit-down meals and possible food-truck catering for functions.","Aberdeen · trading details to be confirmed"],
- ["Karooh Kitchen","Local takeaway meals","Previously listed meal option; please confirm whether it trades under this name.","Aberdeen · trading details to be confirmed"],
+ ["Karooh Kitchen","Pizza, Fish & Chips","Local takeaway pizza, fish and chips.","Aberdeen · trading details to be confirmed"],
  ["Kamdebo Padstal","Karoo farm-stall favourites","Karoo-style food, pancakes, baked goods, preserves and farm products.","N9 / R61 junction"]
 ];
 export default function Eat() {

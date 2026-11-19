@@ -71,7 +71,12 @@
     "categories": [
       "Town"
     ],
-    "links": []
+    "links": [
+      [
+        "Booking profile",
+        "https://www.booking.com/hotel/za/die-pophuis.en-gb.html"
+      ]
+    ]
   },
   {
     "name": "Die Tuishuis",
@@ -200,7 +205,12 @@
     "categories": [
       "Activities"
     ],
-    "links": []
+    "links": [
+      [
+        "Church directory",
+        "https://ngkok.co.za/kontak-gemeentes/"
+      ]
+    ]
   },
   {
     "name": "Remax",
@@ -214,7 +224,16 @@
     "categories": [
       "Business"
     ],
-    "links": []
+    "links": [
+      [
+        "Company website",
+        "https://www.smhart.co.za/"
+      ],
+      [
+        "LinkedIn",
+        "https://www.linkedin.com/company/smhart-security"
+      ]
+    ]
   },
   {
     "name": "Super Store",

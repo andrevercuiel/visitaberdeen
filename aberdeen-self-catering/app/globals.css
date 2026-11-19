@@ -262,3 +262,14 @@
 .activity-navigation a{font-size:.88rem;font-weight:700;color:#254537;padding:4px 0}
 .activity-navigation a:hover,.activity-navigation a:focus-visible{text-decoration:underline;text-underline-offset:5px}
 @media(max-width:700px){.activity-navigation .container{gap:6px 18px;padding-block:10px}.activity-navigation a{font-size:.8rem}}
+
+/* Activity logos remain complete and form one accessible link per activity. */
+.activity-logo-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px 22px;margin-top:28px}
+.activity-logo-card{display:flex;flex-direction:column;align-items:center;text-align:center;padding:14px;border:1px solid var(--line);border-radius:14px;background:#fff;color:var(--ink);text-decoration:none}
+.activity-logo-card img{display:block;width:100%;height:auto;aspect-ratio:1;object-fit:contain}
+.activity-logo-card h3{margin:14px 0 5px;font-size:1.15rem}
+.activity-logo-card span{font-size:.9rem;color:#254537}
+.activity-logo-card:hover{border-color:#557747;box-shadow:0 5px 20px #203d3014}
+.activity-logo-card:focus-visible{outline:3px solid #557747;outline-offset:4px}
+@media(max-width:1000px){.activity-logo-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:600px){.activity-logo-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 12px}.activity-logo-card{padding:8px}.activity-logo-card h3{font-size:1rem}}

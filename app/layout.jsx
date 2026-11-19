@@ -20,7 +20,8 @@ const navigation = [
   ["Explore", "/things-to-do"],
   ["Eat & Drink", "/eat-drink"],
   ["Stay", "/stay"],
-  ["Events", "/events"]
+  ["Events", "/events"],
+  ["ATA Members", "/members"]
 ];
 
 export default function RootLayout({children}) {
@@ -51,6 +52,7 @@ export default function RootLayout({children}) {
           <a href="/discovery-route">Audio tour</a>
           <a href="/map">Visitor map</a>
           <a href="/visitor-info">Visitor information</a>
+          <a href="/members">ATA Members</a>
           <a href="/join-ata">Join ATA</a>
         </div>
       </div>

@@ -14,6 +14,14 @@
     ],
     "links": [
       [
+        "Email",
+        "mailto:info@aberdeenselfcatering.co.za"
+      ],
+      [
+        "Call",
+        "tel:+27827990788"
+      ],
+      [
         "Website",
         "https://www.aberdeenselfcatering.co.za/"
       ],
@@ -50,6 +58,18 @@
     ],
     "links": [
       [
+        "Call",
+        "tel:+27824177989"
+      ],
+      [
+        "Alternative phone",
+        "tel:+27837849006"
+      ],
+      [
+        "Email",
+        "mailto:tanya@aartsappel.co.za"
+      ],
+      [
         "Booking profile",
         "https://www.lekkeslaap.co.za/accommodation/de-denne"
       ]
@@ -69,6 +89,10 @@
     ],
     "links": [
       [
+        "Email",
+        "mailto:kamdebostal@gmail.com"
+      ],
+      [
         "Booking profile",
         "https://www.lekkeslaap.co.za/accommodation/die-dorpshuis-13"
       ],
@@ -85,8 +109,8 @@
     ],
     "links": [
       [
-        "Booking profile",
-        "https://www.booking.com/hotel/za/die-pophuis.en-gb.html"
+        "Booking.com",
+        "https://www.booking.com/hotel/za/die-pophuis.html"
       ]
     ]
   },
@@ -110,6 +134,14 @@
       "Camping"
     ],
     "links": [
+      [
+        "Call",
+        "tel:+27827230025"
+      ],
+      [
+        "Email",
+        "mailto:umeldaf@yahoo.com"
+      ],
       [
         "Booking profile",
         "https://www.lekkeslaap.co.za/accommodation/die-wynberg-werf"
@@ -266,7 +298,12 @@
     "categories": [
       "Farm"
     ],
-    "links": []
+    "links": [
+      [
+        "LekkeSlaap",
+        "https://www.lekkeslaap.co.za/accommodation/waterkloof-14"
+      ]
+    ]
   },
   {
     "name": "Windmill Coffee Shop",

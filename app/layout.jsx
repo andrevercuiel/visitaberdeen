@@ -1,5 +1,4 @@
 import "./style.css";
-import PhotoGallery from "./PhotoGallery";
 
 export const metadata = {
   metadataBase: new URL("https://visitaberdeen.co.za"),
@@ -43,7 +42,7 @@ export default function RootLayout({children}) {
         </nav>
       </details>
     </header>
-    <div id="main-content">{children}<PhotoGallery/></div>
+    <div id="main-content">{children}</div>
     <footer className="quietFooter">
       <div className="footerInner">
         <div><strong>Visit Aberdeen</strong><p>Slow down. Stay a little. Discover the Karoo.</p><p className="fine">Aberdeen · Eastern Cape · South Africa</p></div>

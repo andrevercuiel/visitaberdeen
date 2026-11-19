@@ -16,12 +16,14 @@
   },
   {
     "name": "Aloe Lodge",
-    "kind": "Town · Farm",
-    "address": "Aberdeen district",
+    "kind": "Aberdeen · Self-catering accommodation",
+    "address": "Aberdeen, Eastern Cape",
     "image": null,
     "url": null,
     "ataMember": true,
-    "links": []
+    "links": [],
+    "description": "Aloe Lodge – Your Home Away From Home. Two spacious self-catering houses in Aberdeen offer accommodation for up to 14 guests in total. Breakfast is available on request.\n\nAloe Lodge 1 – Sleeps up to 8 guests. Four bedrooms, all with en-suite bathrooms. Three bedrooms can be configured with two single beds or one king-size bed; the fourth has a double bed. All en-suites include a shower, toilet and hand basin. Tea and coffee station in every room. Comfortable lounge and dining area, fully equipped self-catering kitchen and private, fully enclosed braai area.\n\nAloe Lodge 2 – Sleeps up to 6 guests. Three bedrooms: bedroom 1 is en-suite with two single beds or one king-size bed; bedroom 2 has two single beds or one king-size bed; bedroom 3 has a double bed. Bedrooms 2 and 3 share a bathroom with shower, toilet and hand basin. Spacious lounge and dining area, fully equipped self-catering kitchen and private, fully enclosed braai area.",
+    "descriptionAf": "Aloe Lodge – Jou tuiste weg van die huis. Twee ruim selfsorghuise in Aberdeen bied gesamentlik slaapplek vir tot 14 gaste. Ontbyt is op versoek beskikbaar.\n\nAloe Lodge 1 – Slaapplek vir tot 8 gaste. Vier slaapkamers, elk met ’n en suite-badkamer. Drie slaapkamers kan met twee enkelbeddens of een koninggrootte-bed ingerig word; die vierde het ’n dubbelbed. Elke badkamer het ’n stort, toilet en wasbak. Tee- en koffiemaakgeriewe in elke kamer, ’n gemaklike sit- en eetarea, volledig toegeruste selfsorgkombuis en privaat, volledig omheinde braai-area.\n\nAloe Lodge 2 – Slaapplek vir tot 6 gaste. Drie slaapkamers: slaapkamer 1 het ’n en suite-badkamer en twee enkelbeddens of een koninggrootte-bed; slaapkamer 2 het twee enkelbeddens of een koninggrootte-bed; slaapkamer 3 het ’n dubbelbed. Slaapkamers 2 en 3 deel ’n badkamer met stort, toilet en wasbak. Ruim sit- en eetarea, volledig toegeruste selfsorgkombuis en privaat, volledig omheinde braai-area."
   },
   {
     "name": "De Denne (Aberdeen)",

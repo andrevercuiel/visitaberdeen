@@ -176,13 +176,25 @@
     "name": "N9 Karoo Retreat",
     "kind": "Town cottage · Farm cottage · Caravan & camping",
     "address": "Aberdeen and surrounding district, Eastern Cape",
-    "image": null,
+    "image": "https://n9karooretreat.odoo.com/web/image/467-6e13daee/oop%20veld.jpg",
     "url": "https://n9karooretreat.co.za/",
     "ataMember": true,
     "links": [
       [
         "Website",
         "https://n9karooretreat.co.za/"
+      ],
+      [
+        "WhatsApp: 067 324 7246",
+        "https://wa.me/27673247246"
+      ],
+      [
+        "Call: 067 324 7246",
+        "tel:+27673247246"
+      ],
+      [
+        "Email",
+        "mailto:aberdeen.karoo@gmail.com"
       ]
     ],
     "description": "Caravan Stop: Six caravan, motorhome and camping stands near the N9. Bookings essential. Kaapse Poortjie farm, approximately 18 km from Aberdeen, Eastern Cape.\n\nFarm Cottage: Self-catering farm cottage in a quiet rural setting. Kaapse Poortjie farm, N9, Eastern Cape.\n\nTown Cottage: One of three accommodation options offered by N9 Karoo Retreat. 13 Church Street, Eastern Cape.",

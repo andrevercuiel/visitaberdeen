@@ -1,3 +1,4 @@
+import VenuePhoto from "./venue-photo";
 import members from "../../data/ata-members.json";
 export const metadata = {
  title:"Where to Eat in Aberdeen, Eastern Cape",
@@ -18,9 +19,9 @@ export default function Eat() {
    <p className="lede">Good coffee, a relaxed breakfast or a taste of the Karoo. Choose a stop and check arrangements before you visit.</p>
    <div className="simpleDirectory">
      {venues.map(([name,tag,detail,address,detailAf])=>{const member=name==="Checkmate Coffee Café"?(()=>{const parent=members.find(m=>m.name==="Aberdeen Self Catering");return parent?{...parent,links:[["Checkmate Café website","https://www.aberdeenselfcatering.co.za/checkmate-coffee-cafe/"],["WhatsApp: 082 799 0788","https://wa.me/27827990788"],["Email","mailto:info@aberdeenselfcatering.co.za"],["Call: 082 799 0788","tel:+27827990788"]]}:null;})():members.find(m=>m.name===name&&m.categories.includes("Eat & Drink"));return member?<details className="directoryItem" key={name}>
-       <summary><span><strong>{name}</strong><small>{name==="Checkmate Coffee Café"?"Part of Aberdeen Self Catering · ATA member 2026":"ATA member 2026"} · {tag}</small></span><span className="directoryExpand" aria-hidden="true">＋</span></summary>
+       <summary><span style={{display:"flex",alignItems:"center",gap:"14px"}}><VenuePhoto name={name}/><span><strong>{name}</strong><small>{name==="Checkmate Coffee Café"?"Part of Aberdeen Self Catering · ATA member 2026":"ATA member 2026"} · {tag}</small></span></span><span className="directoryExpand" aria-hidden="true">＋</span></summary>
        <div className="directoryBody"><div lang="en">{detail.split("\n\n").map((paragraph,i)=><p key={i}>{paragraph}</p>)}</div>{detailAf&&<details lang="af"><summary>Lees in Afrikaans</summary>{detailAf.split("\n\n").map((paragraph,i)=><p key={i}>{paragraph}</p>)}</details>}<p className="fine">{address}</p>{member.links.map(([label,url])=><p key={url}><a href={url} target="_blank" rel="noopener noreferrer">{label} ↗</a></p>)}</div>
-     </details>:<article className="feature" key={name}><h3>{name}</h3></article>;})}
+     </details>:<article className="feature" key={name} style={{display:"flex",alignItems:"center",gap:"14px"}}><VenuePhoto name={name}/><h3>{name}</h3></article>;})}
    </div>
    <div className="quietBottomLink"><a href="/visitor-routes#authentic-karoo-flavours">Explore the Karoo Flavours route →</a></div>
    <p className="fine">Venue details and current opening hours may change. Some names and addresses still need confirmation; membership follows the 2026 ATA register.</p>

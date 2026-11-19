@@ -202,12 +202,14 @@
   },
   {
     "name": "Waterkloof",
-    "kind": "Farm",
+    "kind": "Aberdeen district · Farm self catering",
     "address": "Aberdeen district",
     "image": "/photos/aberdeen/waterkloof1.avif",
     "url": null,
     "ataMember": true,
-    "links": []
+    "links": [],
+    "description": "Waterkloof is a charming self-catering house situated in Aberdeen, Eastern Cape, on a working farm, offering beautiful views of the dam and surrounding landscapes.",
+    "descriptionAf": "Waterkloof is ’n bekoorlike selfsorghuis op ’n werkende plaas in Aberdeen, Oos-Kaap, met pragtige uitsigte oor die dam en omliggende landskap."
   },
   {
     "name": "Manakwa Self Catering",

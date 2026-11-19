@@ -173,34 +173,20 @@
     "descriptionAf": "Karoo Secret is ’n rustige toevlugsoord op die legendariese vlaktes van die Camdeboo in die Groot-Karoo, met Margot en Chris Hayward as gasheer en gasvrou. Die gerestoureerde bestuurdershuisie op ’n vierdegeslag-werkskaapplaas bied pragtige sonsondergange en uitgestrekte Karoo-lugruimtes.\n\nDie plaas is ideaal vir fietsryers, natuurliefhebbers en voëlkykers, met verskeie staproetes. Secret House bied slaapplek vir tot nege gaste in ’n opgeknapte plaashuis uit die 1950's, met moderne geriewe en oorspronklike karakter.\n\nLark Cottage, ’n voormalige plaasskool, bied slaapplek vir vier gaste in twee selfsorgeenhede, met sonkrag en ’n gesellige braai-area.\n\nGeniet die rustigheid van die plaaslewe, voëlkyk en ’n verfrissende swem in die ‘Karoozie’-swembad. Besienswaardighede in die omgewing sluit die Camdeboo- en Karoo Nasionale Parke in."
   },
   {
-    "name": "N9 Karoo Retreat — Caravan Stop",
+    "name": "N9 Karoo Retreat",
+    "kind": "Town cottage · Farm cottage · Caravan & camping",
+    "address": "Aberdeen and surrounding district, Eastern Cape",
     "image": null,
-    "url": null,
-    "kind": "Aberdeen district · Caravan / camping",
-    "address": "Kaapse Poortjie farm, approximately 18 km from Aberdeen, Eastern Cape",
-    "description": "Six caravan, motorhome and camping stands near the N9. Bookings essential.",
+    "url": "https://n9karooretreat.co.za/",
     "ataMember": true,
-    "links": []
-  },
-  {
-    "name": "N9 Karoo Retreat — Farm Cottage",
-    "image": null,
-    "url": null,
-    "kind": "Aberdeen district · Farm stay",
-    "address": "Kaapse Poortjie farm, N9, Eastern Cape",
-    "description": "Self-catering farm cottage in a quiet rural setting.",
-    "ataMember": true,
-    "links": []
-  },
-  {
-    "name": "N9 Karoo Retreat — Town Cottage",
-    "image": null,
-    "url": null,
-    "kind": "Aberdeen town · Self catering",
-    "address": "13 Church Street, Eastern Cape",
-    "description": "One of three accommodation options offered by N9 Karoo Retreat.",
-    "ataMember": true,
-    "links": []
+    "links": [
+      [
+        "Website",
+        "https://n9karooretreat.co.za/"
+      ]
+    ],
+    "description": "Caravan Stop: Six caravan, motorhome and camping stands near the N9. Bookings essential. Kaapse Poortjie farm, approximately 18 km from Aberdeen, Eastern Cape.\n\nFarm Cottage: Self-catering farm cottage in a quiet rural setting. Kaapse Poortjie farm, N9, Eastern Cape.\n\nTown Cottage: One of three accommodation options offered by N9 Karoo Retreat. 13 Church Street, Eastern Cape.",
+    "descriptionAf": "N9 Karoo Retreat bied drie verblyfopsies onder een besigheid: ’n dorpshuisie, ’n plaashuisie en ’n karavaan- en kampeerterrein. Besoek die amptelike webwerf vir verdere besonderhede en besprekings."
   },
   {
     "name": "Waterkloof",

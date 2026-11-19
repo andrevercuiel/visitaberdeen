@@ -13,7 +13,7 @@ export default function Events(){
    <section aria-labelledby="event-dates">
     <h2 id="event-dates" className="sectionTitle">Upcoming events</h2>
     {upcoming.length?<div className="simpleDirectory">{upcoming.map(e=><article className="directoryItem eventListing" key={e.id}>
-      <span className="eyebrow">{e.startDate} · {e.category}</span><h3>{e.name}</h3><p>{e.description}</p><p className="fine">{e.venue}</p>{e.url&&<a href={e.url} target="_blank" rel="noreferrer">Event information →</a>}
+      <span className="eyebrow">{e.startDate} · {e.category}</span><h3>{e.name}</h3>{e.poster&&<a href={e.poster} target="_blank" rel="noreferrer"><img src={e.poster} alt={e.name+" event poster"} style={{width:"100%",maxWidth:440,height:"auto",borderRadius:8}} loading="lazy"/></a>}<p>{e.description}</p><p className="fine">{e.venue}</p>{e.url&&<a href={e.url} target="_blank" rel="noreferrer">{e.contactLabel||"Event information"} →</a>}
     </article>)}</div>:<div className="emptyState"><p>No confirmed dates are listed at present.</p><p className="fine">New events will appear here once organisers confirm their details.</p></div>}
    </section>
    <section className="eventIdeas" aria-labelledby="seasonal-events">

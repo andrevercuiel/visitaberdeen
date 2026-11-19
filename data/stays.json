@@ -1,7 +1,7 @@
 [
   {
     "name": "Aberdeen Self Catering",
-    "image": "https://www.aberdeenselfcatering.co.za/wp-content/uploads/2025/04/klein-karoo-2.png",
+    "image": "https://www.aberdeenselfcatering.co.za/media/2023/03/20230308_154512-scaled.webp",
     "url": "https://www.aberdeenselfcatering.co.za/",
     "kind": "Aberdeen town · Self catering",
     "address": "14 Andries Pretorius Street, Eastern Cape",
@@ -11,6 +11,14 @@
       [
         "Website",
         "https://www.aberdeenselfcatering.co.za/"
+      ],
+      [
+        "WhatsApp: 082 799 0788",
+        "https://wa.me/27827990788"
+      ],
+      [
+        "Check availability & book",
+        "https://book.nightsbridge.com/19959"
       ]
     ]
   },

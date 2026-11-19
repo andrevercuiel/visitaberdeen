@@ -1,7 +1,7 @@
 const routes = [
   "", "things-to-do", "eat-drink", "stay", "events", "map", "plan-your-trip",
   "visitor-routes", "architecture", "churches", "discover", "discovery-route", "explore-the-karoo",
-  "local-products", "stories", "visitor-info", "join-ata"
+  "local-products", "stories", "visitor-info", "join-ata", "members"
 ];
 
 export default function sitemap() {

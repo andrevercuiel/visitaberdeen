@@ -151,51 +151,32 @@
   {
     "name": "N9 Karoo Retreat — Caravan Stop",
     "image": null,
-    "url": "https://n9karooretreat.odoo.com/n9-caravan-stop",
+    "url": null,
     "kind": "Aberdeen district · Caravan / camping",
     "address": "Kaapse Poortjie farm, approximately 18 km from Aberdeen, Eastern Cape",
     "description": "Six caravan, motorhome and camping stands near the N9. Bookings essential.",
     "ataMember": true,
-    "links": [
-      [
-        "Website",
-        "https://n9karooretreat.odoo.com/"
-      ],
-      [
-        "Accommodation profile",
-        "https://n9karooretreat.odoo.com/n9-caravan-stop"
-      ]
-    ]
+    "links": []
   },
   {
     "name": "N9 Karoo Retreat — Farm Cottage",
     "image": null,
-    "url": "https://n9karooretreat.odoo.com/",
+    "url": null,
     "kind": "Aberdeen district · Farm stay",
     "address": "Kaapse Poortjie farm, N9, Eastern Cape",
     "description": "Self-catering farm cottage in a quiet rural setting.",
     "ataMember": true,
-    "links": [
-      [
-        "Website",
-        "https://n9karooretreat.odoo.com/"
-      ]
-    ]
+    "links": []
   },
   {
     "name": "N9 Karoo Retreat — Town Cottage",
     "image": null,
-    "url": "https://n9karooretreat.odoo.com/",
+    "url": null,
     "kind": "Aberdeen town · Self catering",
     "address": "13 Church Street, Eastern Cape",
     "description": "One of three accommodation options offered by N9 Karoo Retreat.",
     "ataMember": true,
-    "links": [
-      [
-        "Website",
-        "https://n9karooretreat.odoo.com/"
-      ]
-    ]
+    "links": []
   },
   {
     "name": "Waterkloof",

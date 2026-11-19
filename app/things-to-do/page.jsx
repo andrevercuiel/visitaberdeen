@@ -1,3 +1,4 @@
+import MemberCard from "../member-card";
 import members from "../../data/ata-members.json";
 import {routes} from "../../data/visitorRoutes";
 export const metadata = {
@@ -26,7 +27,7 @@ export default function ThingsToDo() {
         <span className="routeChoiceArrow" aria-hidden="true">→</span>
       </a>)}
     </div>
-    <section><h2>ATA member activities</h2><div className="featureGrid">{members.filter(m=>m.categories.includes("Activities")).map(m=><article className="feature" key={m.name}><span className="eyebrow">ATA member 2026</span><h3>{m.name}</h3>{m.links.map(([label,url])=><p key={url}><a href={url} target="_blank" rel="noopener noreferrer">{label} ↗</a></p>)}</article>)}</div></section>
+    <section><h2>ATA member activities</h2><div className="businessCardGrid">{members.filter(m=>m.categories.includes("Activities")).map(m=><MemberCard key={m.name} member={m}/>)}</div></section>
     <section className="moreExplore" aria-labelledby="specific-heading">
       <h2 id="specific-heading">Looking for something specific?</h2>
       <div className="textLinkCollection">

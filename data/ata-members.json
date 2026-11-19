@@ -1,0 +1,240 @@
+[
+  {
+    "name": "Aalwynhof",
+    "categories": [
+      "Business"
+    ],
+    "links": []
+  },
+  {
+    "name": "Aberdeen Self Catering",
+    "categories": [
+      "Town",
+      "Camping"
+    ],
+    "links": [
+      [
+        "Website",
+        "https://www.aberdeenselfcatering.co.za/"
+      ]
+    ]
+  },
+  {
+    "name": "Aloe Lodge",
+    "categories": [
+      "Town",
+      "Farm"
+    ],
+    "links": []
+  },
+  {
+    "name": "Art-I-Kapa & Equine Therapy",
+    "categories": [
+      "Activities",
+      "Business"
+    ],
+    "links": []
+  },
+  {
+    "name": "De Denne",
+    "categories": [
+      "Town"
+    ],
+    "links": [
+      [
+        "Booking profile",
+        "https://www.lekkeslaap.co.za/accommodation/de-denne"
+      ]
+    ]
+  },
+  {
+    "name": "Die Bakker",
+    "categories": [
+      "Business"
+    ],
+    "links": []
+  },
+  {
+    "name": "Die Dorpshuis",
+    "categories": [
+      "Town"
+    ],
+    "links": [
+      [
+        "Booking profile",
+        "https://www.lekkeslaap.co.za/accommodation/die-dorpshuis-13"
+      ]
+    ]
+  },
+  {
+    "name": "Die Pophuis",
+    "categories": [
+      "Town"
+    ],
+    "links": []
+  },
+  {
+    "name": "Die Tuishuis",
+    "categories": [
+      "Town"
+    ],
+    "links": [
+      [
+        "Booking profile",
+        "https://www.lekkeslaap.co.za/accommodation/die-tuis-huis-19"
+      ]
+    ]
+  },
+  {
+    "name": "Die Wynberg Werf",
+    "categories": [
+      "Town",
+      "Farm",
+      "Camping"
+    ],
+    "links": [
+      [
+        "Booking profile",
+        "https://www.lekkeslaap.co.za/accommodation/die-wynberg-werf"
+      ]
+    ]
+  },
+  {
+    "name": "Dowefontein",
+    "categories": [
+      "Town",
+      "Farm"
+    ],
+    "links": []
+  },
+  {
+    "name": "House of Notes",
+    "categories": [
+      "Town"
+    ],
+    "links": [
+      [
+        "Booking profile",
+        "https://www.lekkeslaap.co.za/accommodation/house-of-notes"
+      ]
+    ]
+  },
+  {
+    "name": "Janet van Lamp",
+    "categories": [
+      "Town"
+    ],
+    "links": []
+  },
+  {
+    "name": "Kamdebo Padstal",
+    "categories": [
+      "Eat & Drink"
+    ],
+    "links": [
+      [
+        "Website",
+        "https://kamdebopadstal.wordpress.com/"
+      ],
+      [
+        "Facebook",
+        "https://m.facebook.com/kamdeboopadstal/"
+      ]
+    ]
+  },
+  {
+    "name": "Karoo Rest",
+    "categories": [
+      "Town"
+    ],
+    "links": []
+  },
+  {
+    "name": "Karoo Secret",
+    "categories": [
+      "Farm"
+    ],
+    "links": [
+      [
+        "Tourism profile",
+        "https://www.aberdeenkaroo.co.za/listing/karoosecret42kmfromaberdeen"
+      ]
+    ]
+  },
+  {
+    "name": "Karooh Kitchen",
+    "categories": [
+      "Eat & Drink"
+    ],
+    "links": [
+      [
+        "Tourism profile",
+        "https://www.karooheartland.com/listings/karooh-kitchen/"
+      ]
+    ]
+  },
+  {
+    "name": "Local Guide & Photography",
+    "categories": [
+      "Activities",
+      "Business"
+    ],
+    "links": []
+  },
+  {
+    "name": "N9 Karoo Retreat",
+    "categories": [
+      "Town",
+      "Farm",
+      "Camping"
+    ],
+    "links": [
+      [
+        "Website",
+        "https://n9karooretreat.odoo.com/"
+      ]
+    ]
+  },
+  {
+    "name": "NG Kerk & Unieke Bybelse Panele",
+    "categories": [
+      "Activities"
+    ],
+    "links": []
+  },
+  {
+    "name": "Remax",
+    "categories": [
+      "Business"
+    ],
+    "links": []
+  },
+  {
+    "name": "SMHART Security",
+    "categories": [
+      "Business"
+    ],
+    "links": []
+  },
+  {
+    "name": "Super Store",
+    "categories": [
+      "Business"
+    ],
+    "links": []
+  },
+  {
+    "name": "Waterkloof",
+    "categories": [
+      "Farm"
+    ],
+    "links": []
+  },
+  {
+    "name": "Windmill Coffee Shop",
+    "categories": [
+      "Eat & Drink"
+    ],
+    "links": []
+  }
+]

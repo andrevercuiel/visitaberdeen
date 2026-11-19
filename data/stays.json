@@ -79,7 +79,7 @@
   },
   {
     "name": "Die Tuis Huis",
-    "image": null,
+    "image": "/photos/aberdeen/tuishuis.jpg",
     "url": "https://www.lekkeslaap.co.za/accommodation/die-tuis-huis-19",
     "kind": "Aberdeen town · Self catering",
     "address": "16 Porter Street, Eastern Cape",
@@ -120,7 +120,7 @@
     "name": "House of Notes",
     "kind": "Town",
     "address": "Aberdeen district",
-    "image": null,
+    "image": "/photos/aberdeen/houseofnotes.jpg",
     "url": null,
     "ataMember": true,
     "links": [
@@ -204,7 +204,7 @@
     "name": "Waterkloof",
     "kind": "Farm",
     "address": "Aberdeen district",
-    "image": null,
+    "image": "/photos/aberdeen/waterkloof1.jpg",
     "url": null,
     "ataMember": true,
     "links": []

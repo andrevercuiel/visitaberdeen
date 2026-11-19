@@ -1,3 +1,8 @@
 "use client";
-const photos={"Checkmate Coffee Café":"https://www.aberdeenselfcatering.co.za/wp-content/uploads/2025/03/20250320_192400-scaled.jpg","Windmill Coffee Shop":"https://img02.restaurantguru.com/cb73-Restaurant-Windmill-Coffee-interior.jpg","Karooh Kitchen":"https://img02.restaurantguru.com/c176-Restaurant-KAH-ROOH-Accomodation-and-Take-Away-design.jpg","Kamdebo Padstal":"https://img02.restaurantguru.com/ccfe-Restaurant-Kamdebo-Padstal-Aberdeen-picture.jpg"};
-export default function VenuePhoto({name}) { return <div className="businessCardPhoto"><span style={{fontSize:"11px",textAlign:"center",padding:"5px",color:"#51483d"}}>Photo coming soon</span>{photos[name]&&<img src={photos[name]} alt={name} loading="lazy" style={{position:"absolute",inset:0,width:"100%",height:"100%",objectFit:"cover"}} onError={e=>{e.currentTarget.style.display="none"}}/>}</div>; }
+import {useState} from "react";
+const photos={"Checkmate Coffee Café":"/photos/aberdeen/check-mate.webp"};
+export default function VenuePhoto({name}) {
+ const [failed,setFailed]=useState(false);
+ if(!photos[name]||failed) return null;
+ return <div className="businessCardPhoto"><img src={photos[name]} alt={name} loading="lazy" onError={()=>setFailed(true)}/></div>;
+}

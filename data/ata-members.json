@@ -243,6 +243,14 @@
       [
         "Tourism profile",
         "https://www.karooheartland.com/listings/karooh-kitchen/"
+      ],
+      [
+        "Call: 079 304 3719",
+        "tel:+27793043719"
+      ],
+      [
+        "Email",
+        "mailto:ursula.snydert@gmail.com"
       ]
     ]
   },
@@ -339,6 +347,15 @@
     "categories": [
       "Eat & Drink"
     ],
-    "links": []
+    "links": [
+      [
+        "Call: 072 514 1008",
+        "tel:+27725141008"
+      ],
+      [
+        "Email",
+        "mailto:jennika.marx1@gmail.com"
+      ]
+    ]
   }
 ]

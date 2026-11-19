@@ -225,3 +225,18 @@ body{background:#faf9f5;color:#273b31}
  .routeJump a{font-size:12px;padding:9px 10px}
  .stayCompactPhoto{width:110px}
 }
+
+/* Unified business directory cards */
+.businessCardGrid,.stayCompactGrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;margin:30px 0 40px;align-items:start}
+.businessCard,.stayCompact{display:block;min-width:0;background:#fff;border:1px solid #e4e7df;border-radius:9px;overflow:hidden}
+.businessCardPhoto,.stayCompactPhoto{width:100%;height:auto;aspect-ratio:16/9;position:relative;overflow:hidden;background:#e9e2d7;display:grid;place-items:center}
+.businessCardPhoto img,.stayCompactPhoto img{width:100%;height:100%;object-fit:cover}
+.businessCardCopy,.stayCompactText{padding:22px}
+.businessCardCopy h2,.stayCompactText h2{font:normal 27px/1.25 Georgia,serif;margin:7px 0 10px;color:#253c30}
+.businessCardCopy p,.stayCompactText p{font-size:14px;line-height:1.65;margin:0 0 10px;color:#5e6d61;overflow-wrap:anywhere}
+.businessCardCopy .businessTag{font-weight:700;color:#325942}
+.businessLinks{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.businessLinks a{border:1px solid #dce4db;border-radius:5px;padding:7px 10px;color:#326348;font-size:13px;font-weight:700;overflow-wrap:anywhere}
+.businessMore,.stayCompactText details{margin:12px 0;color:#326348;font-size:14px}
+.businessMore summary,.stayCompactText summary{cursor:pointer;font-weight:700;margin-bottom:10px}
+@media(max-width:730px){.businessCardGrid,.stayCompactGrid{grid-template-columns:1fr}.businessCardCopy,.stayCompactText{padding:19px}}
